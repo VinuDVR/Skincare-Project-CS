@@ -3,7 +3,7 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
 
-products_df = pd.read_csv("sephora_products.csv")
+products_df = pd.read_csv("sephora_products_labeled.csv")
 
 driver = webdriver.Chrome()
 
@@ -22,5 +22,5 @@ for index, row in products_df.iterrows():
 driver.quit()
 
 products_df["Ingredients"] = products_df["Name"].map(ingredients_data)
-products_df.to_csv("sephora_products.csv", index=False)
-print("Ingredients added and data saved to sephora_products.csv")
+products_df.to_csv("sephora_products_labeled.csv", index=False)
+print("Ingredients added and data saved to sephora_products_labeled.csv")
