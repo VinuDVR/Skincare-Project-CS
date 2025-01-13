@@ -1,0 +1,83 @@
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+from user_input import user_data
+
+user_price_range = user_data["Price Range"]
+user_routine_preference = user_data["Routine Preference"]
+user_skin_type = user_data["Skin Type"]
+user_skin_concerns = user_data["Skin Concerns"]
+
+df = pd.read_csv("preprocessed_skincare_products.csv")
+
+ingredient_weights = {
+    'Acne or breakouts': ["salicylic acid", "benzoyl peroxide", "azelaic acid"],
+    'Dry': ["hyaluronic acid", "ceramides", "glycerin"],
+    'Oily': ["niacinamide", "zinc", "clay"],
+    'Fine lines or wrinkles': ["retinol", "peptides", "antioxidants"],
+    'Sensitive': ["aloe vera", "chamomile", "oatmeal"],
+    'Redness or irritation': ["niacinamide", "hyaluronic acid", "salicylic acid"],
+    'Uneven skin tone': ["vitamin c", "kojic acid", "azelaic acid"],
+    'Dark spots': ["vitamin c", "kojic acid", "azelaic acid"],
+    'Large pores': ["salicylic acid", "niacinamide", "clay"],
+    'Dullness': ["vitamin c", "hyaluronic acid", "alpha hydroxy acids (ahas)"],
+    'Dehydration': ["hyaluronic acid", "ceramides", "glycerin"],
+    'None of the above': []
+}
+
+routine_mapping = {
+    "Minimal (3 steps)": ["Cleansers", "Moisturizers", "Sunscreens"],
+    "Moderate (4 steps)": ["Cleansers", "Serums", "Moisturizers", "Sunscreens"],
+    "Extensive (6 steps)": ["Cleansers", "Toners", "Serums", "Eye Creams", "Moisturizers", "Sunscreens"]
+}
+
+def rule_based_filtering(data, price_range, routine_preference):
+    # Filter by price category
+    filtered_data = data[data['Price Category'] == price_range]
+    
+    # Further filtering based on minimum rating
+    filtered_data = filtered_data[filtered_data['Rating'] >= 4.0]
+    
+    routine_categories = routine_mapping[routine_preference]
+    filtered_data = filtered_data[filtered_data['Category'].isin(routine_categories)]
+
+    return filtered_data
+
+filtered_products = rule_based_filtering(df, user_price_range, user_routine_preference)
+
+def score_products(df, user_skin_concerns):
+    required_ingredients = set(
+        ingredient for concern in user_skin_concerns for ingredient in ingredient_weights[concern]
+    )
+
+    df["Score"] = 0
+
+    for idx, product in df.iterrows():
+        product_ingredients = set(product["Ingredients"].lower().split(", "))
+        match_score = sum(1 for ingredient in required_ingredients if ingredient in product_ingredients)
+        df.at[idx, "Score"] = match_score
+
+    
+    recommended_products = df[df["Score"] > 0]
+    return recommended_products.sort_values(by=["Score", "Rating"], ascending=[False, False])
+
+recommended_products = score_products(filtered_products, user_skin_concerns)
+
+print("Recommended Products: \n", recommended_products)
+
+recommended_products.to_csv('recommended_skincare_products.csv', index=False)
+print("Recommendations saved to recommended_skincare_products.csv")
+
+#selected_categories = routine_mapping[user_routine_preference]
+#filtered_products = recommended_products[recommended_products["Category"].isin(selected_categories)]
+
+first_instance_per_category = (
+    recommended_products.groupby("Category", as_index = False)
+    .first()
+    .sort_values(by = "Category")
+)
+
+print("First Instance Products for Routine Preference: \n", first_instance_per_category)
+
+first_instance_per_category.to_csv('final_recommendation.csv', index = False)
+print("Finaal recommendation saved to final_recommendation.csv")
