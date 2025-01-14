@@ -56,7 +56,7 @@ def user_input():
             print("Invalid input. Please enter a number.")
 
     
-    price_range_options = ["Budget-friendly", "Mid-range", "High-end or luxury"]
+    price_range_options = ["Budget-Friendly", "Mid-range", "High-end"]
     print("\nDo you have a preferred product price range in mind?")
     for i, option in enumerate(price_range_options, 1):
         print(f"{i}. {option}")

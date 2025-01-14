@@ -4,10 +4,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 
-# Load the dataset
-data = pd.read_csv('preprocessed_skincare_products.csv')
+df = pd.read_csv('preprocessed_skincare_products.csv')
 
-# Define ingredient filters for skin concerns and types
+
 filter_criteria = {
     'Acne or breakouts': ["salicylic acid", "benzoyl peroxide", "azelaic acid"],
     'Dry': ["hyaluronic acid", "ceramides", "glycerin"],
@@ -23,12 +22,12 @@ filter_criteria = {
     'None of the above': []
 }
 
-# Initial Rule-Based Filtering
+
 def rule_based_filtering(data, user_inputs):
-    # Filter by price category
+    
     filtered_data = data[data['Price Category'] == user_inputs['Price Range']]
     
-    # Further filtering based on minimum rating
+    
     filtered_data = filtered_data[filtered_data['Rating'] >= 4.0]
     
     return filtered_data
@@ -91,7 +90,7 @@ def user_input():
             print("Invalid input. Please enter a number.")
 
     
-    price_range_options = ["Budget-friendly", "Mid-range", "High-end or luxury"]
+    price_range_options = ["Budget-Friendly", "Mid-range", "High-end"]
     print("\nDo you have a preferred product price range in mind?")
     for i, option in enumerate(price_range_options, 1):
         print(f"{i}. {option}")
@@ -122,56 +121,53 @@ def user_input():
 user_data = user_input()
 
 
-filtered_data = rule_based_filtering(data, user_data)
+filtered_data = rule_based_filtering(df, user_data)
 
 filtered_data['Ingredients'] = filtered_data['Ingredients'].fillna('').str.lower().str.replace(r'[^\w\s]', '')
 
-# Content-Based Filtering using Ingredients
-# Join ingredient lists as a single string for each product
 
-# Combine relevant ingredients based on user preferences
 relevant_ingredients = []
 for concern in user_data['Skin Concerns']:
     relevant_ingredients.extend(filter_criteria.get(concern, []))
     
 
-# Convert list to a unique set of ingredient keywords
+
 relevant_ingredients = list(set(relevant_ingredients))
 
 print("Relevant Ingredients: ",relevant_ingredients)
 
 #filtered_data['Ingredients'] = filtered_data['Ingredients'].fillna('').str.lower().str.replace(r'[^\w\s]', '')
 
-#data['Ingredients'] = data['Ingredients'].fillna('').str.lower()
+#df['Ingredients'] = df['Ingredients'].fillna('').str.lower()
 
-if relevant_ingredients:
-    # Create TF-IDF vectors only if relevant ingredients exist
-    tfidf_vectorizer = TfidfVectorizer(vocabulary=relevant_ingredients, stop_words='english')
-    ingredient_matrix = tfidf_vectorizer.fit_transform(filtered_data['Ingredients'])
+#if relevant_ingredients:
+    
+    #tfidf_vectorizer = TfidfVectorizer(vocabulary=relevant_ingredients, stop_words='english')
+    #ingredient_matrix = tfidf_vectorizer.fit_transform(filtered_data['Ingredients'])
 
-    # Calculate similarity scores
-    if ingredient_matrix.shape[0] > 1:
-        similarity_scores = cosine_similarity(ingredient_matrix)
-        filtered_data['Recommendation Score'] = np.mean(similarity_scores, axis=1)
-    else:
-        filtered_data['Recommendation Score'] = 0
-else:
-    print("No relevant ingredients found. Using rule-based filtering only.")
-    filtered_data['Recommendation Score'] = filtered_data['Rating']  # Fallback to ratings as a score
+    
+    #if ingredient_matrix.shape[0] > 1:
+        #similarity_scores = cosine_similarity(ingredient_matrix)
+        #filtered_data['Recommendation Score'] = np.mean(similarity_scores, axis=1)
+    #else:
+        #filtered_data['Recommendation Score'] = 0
+#else:
+    #print("No relevant ingredients found. Using rule-based filtering only.")
+    #filtered_data['Recommendation Score'] = filtered_data['Rating']  
 
 
-# Create TF-IDF vectors based on ingredient matching
-#tfidf_vectorizer = TfidfVectorizer(vocabulary=relevant_ingredients, stop_words='english')
-#ingredient_matrix = tfidf_vectorizer.fit_transform(filtered_data['Ingredients'])
+
+tfidf_vectorizer = TfidfVectorizer(vocabulary=relevant_ingredients, stop_words='english')
+ingredient_matrix = tfidf_vectorizer.fit_transform(filtered_data['Ingredients'])
 
 matches_found = filtered_data['Ingredients'].apply(lambda x: any(ingredient in x for ingredient in relevant_ingredients))
 print(f"Number of products with matching ingredients: {matches_found.sum()}")
 
-# Calculate similarity scores
-#similarity_scores = cosine_similarity(ingredient_matrix, ingredient_matrix)
 
-# Generate recommendation scores by averaging the similarity across the filtered products
-#filtered_data['Recommendation Score'] = np.mean(similarity_scores, axis=1)
+similarity_scores = cosine_similarity(ingredient_matrix, ingredient_matrix)
+
+
+filtered_data['Recommendation Score'] = np.mean(similarity_scores, axis=1)
 
 
 recommended_products = filtered_data.sort_values(by='Recommendation Score', ascending=False)

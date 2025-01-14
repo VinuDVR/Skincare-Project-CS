@@ -1,6 +1,4 @@
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 from user_input import user_data
 
 user_price_range = user_data["Price Range"]
@@ -22,6 +20,8 @@ ingredient_weights = {
     'Large pores': ["salicylic acid", "niacinamide", "clay"],
     'Dullness': ["vitamin c", "hyaluronic acid", "alpha hydroxy acids (ahas)"],
     'Dehydration': ["hyaluronic acid", "ceramides", "glycerin"],
+    'Normal': [],
+    'Combination': [],
     'None of the above': []
 }
 
@@ -31,11 +31,12 @@ routine_mapping = {
     "Extensive (6 steps)": ["Cleansers", "Toners", "Serums", "Eye Creams", "Moisturizers", "Sunscreens"]
 }
 
+
 def rule_based_filtering(data, price_range, routine_preference):
-    # Filter by price category
+    
     filtered_data = data[data['Price Category'] == price_range]
     
-    # Further filtering based on minimum rating
+
     filtered_data = filtered_data[filtered_data['Rating'] >= 4.0]
     
     routine_categories = routine_mapping[routine_preference]
@@ -50,7 +51,11 @@ def score_products(df, user_skin_concerns):
         ingredient for concern in user_skin_concerns for ingredient in ingredient_weights[concern]
     )
 
+    required_ingredients.update(ingredient_weights[user_skin_type])
+
     df["Score"] = 0
+
+    print("Relevant Ingredients: ", required_ingredients)
 
     for idx, product in df.iterrows():
         product_ingredients = set(product["Ingredients"].lower().split(", "))
@@ -68,8 +73,6 @@ print("Recommended Products: \n", recommended_products)
 recommended_products.to_csv('recommended_skincare_products.csv', index=False)
 print("Recommendations saved to recommended_skincare_products.csv")
 
-#selected_categories = routine_mapping[user_routine_preference]
-#filtered_products = recommended_products[recommended_products["Category"].isin(selected_categories)]
 
 first_instance_per_category = (
     recommended_products.groupby("Category", as_index = False)
