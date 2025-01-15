@@ -1,17 +1,235 @@
-Brand,Name,Price,Rating,Product URL,Image URL,Category,Price Category,Ingredients,Score
-sisley,intensive serum with tropical resins 30ml,148.0,5.0,https://www.sephora.co.uk/p/SISLEY-Intensive-Serum-with-Tropical-Resins-30ml,//asset.sephora.co.uk/img/products/105765/sisley_intensive_serum_with_tropical_resins_30ml-1712646984_listing.jpg,Cleansers,High-end,"WATER/EAU (AQUA), BUTYLENE GLYCOL, CAPRYLYL METHICONE, GLYCERIN, PEG-7 GLYCERYL COCOATE, PANTHENOL, SALICYLIC ACID, BOSWELLIA CARTERII RESIN EXTRACT, STYRAX BENZOIN RESIN EXTRACT, SPIRAEA ULMARIA EXTRACT, ARCTIUM MAJUS ROOT EXTRACT, COMMIPHORA ABYSSINICA RESIN EXTRACT, ORTHOSIPHON STAMINEUS EXTRACT, PEG-40 HYDROGENATED CASTOR OIL, CARBOMER, ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER, DISODIUM EDTA, ETHYLHEXYLGLYCERIN, SODIUM HYDROXIDE, XANTHAN GUM, MALTODEXTRIN, CITRIC ACID, FRAGRANCE (PARFUM), PHENOXYETHANOL, GERANIOL, AMYL CINNAMAL, ALPHA-ISOMETHYL IONONE, LINALOOL, BENZYL BENZOATE, LIMONENE, CITRAL, EUGENOL, BENZYL ALCOHOL. IL#1A
-
-""""
-
-Složení produktu se muže lišit, prosíme vždy zkontrolujte složení na obalu produktu.
-            ",1
-sisley,intensive dark spot corrector 7ml,120.0,4.575,https://www.sephora.co.uk/p/SISLEY-Intensive-Dark-Spot-Corrector-7ml,//asset.sephora.co.uk/img/products/105767/sisley_intensive_dark_spot_corrector_7ml_fr-1675844362_listing.jpg,Serums,High-end,"WATER/EAU (AQUA), BUTYLENE GLYCOL, HYDROGENATED POLYISOBUTENE, ASCORBYL GLUCOSIDE, GLYCERIN, HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL, PEG-40 HYDROGENATED CASTOR OIL, HEXYLRESORCINOL, TOCOPHERYL ACETATE, BISABOLOL, SALICYLIC ACID, HYDROLYZED OPUNTIA FICUS-INDICA FLOWER EXTRACT, ACETYL RHEUMRHAPONTICUM ROOT EXTRACT, LAVANDULA ANGUSTIFOLIA (LAVENDER) OIL, SALVIA OFFICINALIS (SAGE) OIL, THYMUS MASTICHINA FLOWER OIL, ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER, SODIUM HYDROXIDE, PANTHENYL TRIACETATE, SODIUM CITRATE, TETRASODIUM EDTA, XANTHAN GUM, CITRIC ACID, ETHYLHEXYLGLYCERIN, PHENOXYETHANOL, LINALOOL, LIMONENE, GERANIOL. IL#1A
-
-""""
-
-Složení produktu se muže lišit, prosíme vždy zkontrolujte složení na obalu produktu.
-            ",1
-guerlain,my super tips camphréa stop spot anti-blemish treatment 15ml,28.0,4.55,https://www.sephora.co.uk/p/GUERLAIN-My-Super-Tips-Camphrea-Stop-Spot-Anti-Blemish-Treatment-15ml,//asset.sephora.co.uk/img/products/64961/GUERLAIN_My_Super_Tips_Camphr_eacute_a_Stop_Spot_Anti_Blemish_Treatment_15ml_1461570934_listing.jpg,Moisturizers,High-end,"Aqua (Water), Paraffinum Liquidum (Mineral Oil), Isopropyl Lanolate, Hydrated Silica, Sorbitan Trioleate, Ci 77947 (Zinc Oxide), Ci 77891 (Titanium Dioxide), Hydrogenated Castor Oil, Cera Alba (Beeswax), Allantoin, Camphor, Ci 77492 (Iron Oxides), Magnesium Sulfate, Salicylic Acid, Zinc Gluconate, Stearic Acid, Caprylyl Glycol, Tetrasodium Edta, Ci 77491 (Iron Oxides), Ci 77499 (Iron Oxides), Tocopheryl Acetate.
-            ",1
-dr dennis gross skincare,dr dennis gross alpha beta® pore perfecting & refining serum 30ml,54.4,4.465,https://www.sephora.co.uk/p/Dr-Dennis-Gross-Alpha-Beta-Pore-Perfecting-and-Refining-Serum-30ml,//asset.sephora.co.uk/img/products/164767/dr_dennis_gross_alpha_beta_pore_perfecting_refining_serum_30ml-1685517941_listing.jpg,Serums,High-end,"WATER/AQUA/EAU, PROPYLENE GLYCOL, ETHOXYDIGLYCOL, GLYCERIN, POLYSORBATE 80, BUTYLENE GLYCOL, MANDELIC ACID, CARNITINE HCL, SALICYLIC ACID, FARNESOL, GLYCOLIC ACID, LACTIC ACID,ADIPIC ACID, FOMES OF?CINALIS (MUSHROOM) EXTRACT, OPUNTIA FICUS-INDICA STEM EXTRACT, SALIX ALBA (WILLOW) BARK EXTRACT, PHYTIC ACID, SIRAITIA GROSVENORII FRUIT EXTRACT, HAMAMELIS VIRGINIANA (WITCH HAZEL) WATER, BISABOLOL, PENTASODIUM PENTETATE, CAMELLIA SINENSIS LEAF EXTRACT, HEXYLRESORCINOL, QUERCETIN,TOCOPHEROL, SODIUM HYALURONATE, DIMETHYL ISOSORBIDE, PANTHENOL, UREA, ISOPROPYL JOJOBATE, JOJOBA ALCOHOL, JOJOBA ESTERS, RETINOL, HYDROXYETHYLCELLULOSE, POLYSORBATE 20, POTASSIUM HYDROXIDE, OCTOXYNOL-9,CAPRYLIC/CAPRIC TRIGLYCERIDE, CUCUMIS SATIVUS (CUCUMBER) FRUIT EXTRACT, PRUNUS PERSICA (PEACH) FRUIT EXTRACT,VACCINIUM MACROCARPON (CRANBERRY) FRUIT EXTRACT, LAVANDULA ANGUSTIFOLIA (LAVENDER) EXTRACT, CITRUS AURANTIUM BERGAMIA (BERGAMOT) FRUIT EXTRACT, ROSE EXTRACT, ROSMARINUS OF?CINALIS (ROSEMARY) LEAF EXTRACT, RUBUS IDAEUS (RASPBERRY) FRUIT EXTRACT, CITRUS LIMON (LEMON) FRUIT EXTRACT,TRIETHYL CITRATE, FUCUS VESICULOSUS EXTRACT,JASMINUM OF?CINALE (JASMINE) FLOWER EXTRACT, VANILLA PLANIFOLIA FRUIT EXTRACT, CORIANDRUM SATIVUM (CORIANDER) SEED EXTRACT, BENZOIC ACID, PHENOXYETHANOL, SODIUM BENZOATE
-            ",1
+Brand,Name,Price,Rating,Product URL,Category,Price Category,Recommendation Score
+cerave,hydrating cleanser with hyaluronic acid for normal to dry skin 236ml,7.95,4.615,https://www.sephora.co.uk/p/CeraVe-Hydrating-Cleanser-236ml,Cleansers,Budget-Friendly,0.0
+cerave,foaming cleanser with niacinamide for normal to oily skin 236ml,7.95,4.65,https://www.sephora.co.uk/p/CeraVe-Foaming-Facial-Cleanser-236ml,Cleansers,Budget-Friendly,0.0
+cerave,"sa smoothing cleanser with salicylic acid for dry, rough & bumpy skin 236ml",9.95,4.585,https://www.sephora.co.uk/p/CeraVe-Smoothing-Cleanser-236ml,Cleansers,Budget-Friendly,0.0
+cosrx,salicylic acid daily gentle cleanser 150ml,12.55,4.955,https://www.sephora.co.uk/p/COSRX-Salicylic-Acid-Daily-Gentle-Cleanser-150ml,Cleansers,Budget-Friendly,0.0
+farmacy,beauty green clean makeup meltaway cleansing balm 50ml,17.95,4.485,https://www.sephora.co.uk/p/Farmacy-Beauty-GREEN-CLEAN-Makeup-Meltaway-Cleansing-Balm-50ml,Cleansers,Budget-Friendly,0.0
+cerave,hydrating foaming oil cleanser 236ml,10.1,4.615,https://www.sephora.co.uk/p/CeraVe-Hydrating-Foaming-Oil-Cleanser-236ml,Cleansers,Budget-Friendly,0.0
+cerave,hydrating cream-to-foam cleanser with amino acids for normal to dry skin 236ml,10.1,4.545,https://www.sephora.co.uk/p/CeraVe-Hydrating-Cream-to-Foam-Cleanser-236ml,Cleansers,Budget-Friendly,0.0
+cerave,hydrating cleanser with hyaluronic acid - normal to dry skin 473ml,12.95,4.615,https://www.sephora.co.uk/p/CeraVe-Hydrating-Cleanser-473ml,Cleansers,Budget-Friendly,0.0
+bioderma,sensibio h20 micellar water 850ml,16.8,4.595,https://www.sephora.co.uk/p/BIODERMA-Sensibio-H20-Micellar-Water-850ml,Cleansers,Budget-Friendly,0.0
+cerave,micellar cleansing water with niacinamide for all skin types 295ml,9.75,4.565,https://www.sephora.co.uk/p/CeraVe-Micellar-Cleansing-Water-with-Niacinamide-for-All-Skin-Types-295ml,Cleansers,Budget-Friendly,0.0
+bioderma,sensibio micellar water 100ml,5.2,4.575,https://www.sephora.co.uk/p/BIODERMA-Sensibio-H2O-Make-up-Removing-Micelle-Solution-100ml,Cleansers,Budget-Friendly,0.0
+bioderma,sensibio face wash 500ml,16.0,4.525,https://www.sephora.co.uk/p/BIODERMA-Sensibio-Soothing-Mild-Cleansing-Gel-500ml,Cleansers,Budget-Friendly,0.0
+bioderma,sensibio cleansing micellar oil  125ml,14.4,4.635,https://www.sephora.co.uk/p/bioderma-sensibio-cleansing-micellar-oil-125ml,Cleansers,Budget-Friendly,0.0
+sephora collection,organic cotton pads 50,1.99,4.565,https://www.sephora.co.uk/p/Organic-Cotton-Pads-Organic-Cotton-Pads,Cleansers,Budget-Friendly,0.0
+the ordinary,squalane cleanser 150ml,14.9,5.0,https://www.sephora.co.uk/p/the-ordinary-squalane-cleanser-150ml-,Cleansers,Budget-Friendly,0.0
+farmacy,beauty green clean makeup meltaway cleansing balm 100ml,24.95,4.485,https://www.sephora.co.uk/p/Farmacy-Beauty-GREEN-CLEAN-Makeup-Meltaway-Cleansing-Balm-100ml,Cleansers,Budget-Friendly,0.0
+sephora collection,clean skin gel face wash 125ml,7.45,4.475,https://www.sephora.co.uk/p/sephora-collection-clean-skin-gel-face-wash-125ml,Cleansers,Budget-Friendly,0.0
+sephora collection,cleansing & soothing micellar gel - refreshing and soothing makeup remover gel  - 400 ml,11.2,4.755,https://www.sephora.co.uk/p/Cleansing-and-soothing-micellar-gel-Refreshing-and-Soothing-Makeup-Remover-Gel-400-ml,Cleansers,Budget-Friendly,0.0
+farmacy,beauty clearly clean makeup meltaway cleansing balm 100ml,24.95,4.335,https://www.sephora.co.uk/p/Farmacy-Beauty-Clearly-Clean-Makeup-Meltaway-Cleansing-Balm-100ml,Cleansers,Budget-Friendly,0.0
+cetaphil,gentle skin cleanser 1000ml,18.95,4.415,https://www.sephora.co.uk/p/Cetaphil-Gentle-Skin-Cleanser-1000ml,Cleansers,Budget-Friendly,0.0
+cerave,sa smoothing cleanser 473ml,17.6,4.415,https://www.sephora.co.uk/p/CeraVe-SA-Smoothing-Cleanser-473ml,Cleansers,Budget-Friendly,0.0
+farmacy,beauty whipped greens oil-free foaming cleanser with moringa and papaya 150ml,28.0,4.535,https://www.sephora.co.uk/p/Farmacy-Beauty-Whipped-Greens-Oil-Free-Foaming-Cleanser-With-Moringa-And-Papaya-150ml,Cleansers,Budget-Friendly,0.0
+farmacy,beauty clean bee ultra gentle facial cleanser 150ml,28.0,4.045,https://www.sephora.co.uk/p/Farmacy-Beauty-CLEAN-BEE-Ultra-Gentle-Facial-Cleanser-150ml,Cleansers,Budget-Friendly,0.0
+the ordinary,saccharomyces ferment 30% milky toner 100ml,12.4,4.485,https://www.sephora.co.uk/p/the-ordinary-saccharomyces-ferment-30-milky-toner-100ml,Cleansers,Budget-Friendly,0.0
+the inkey list,oat cleansing balm 50ml,4.85,4.215,https://www.sephora.co.uk/p/The-INKEY-List-Oat-Cleansing-Balm-50ml,Cleansers,Budget-Friendly,0.0
+sephora collection,smoothing cleanser exfoliates + radiance - cleansing gel for face and neck cleansing gel for face and neck (125 ml),8.2,4.515,https://www.sephora.co.uk/p/Smoothing-cleanser-exfoliates--radiance-Cleansing-gel-for-face-and-neck-Nettoyant-lissant-125-ml,Cleansers,Budget-Friendly,0.0
+sephora collection,triple action cleansing water 400ml,11.2,4.025,https://www.sephora.co.uk/p/Triple-Action-Cleansing-Water-400-ml,Cleansers,Budget-Friendly,0.0
+sephora collection,triple action cleansing water 200ml,7.45,4.025,https://www.sephora.co.uk/p/Triple-Action-Cleansing-Water-200ML,Cleansers,Budget-Friendly,0.0
+sephora collection,super glow cleansing powder 25g,9.7,4.615,https://www.sephora.co.uk/p/SEPHORA-COLLECTION-Super-Glow-Cleansing-Powder-25g,Cleansers,Budget-Friendly,0.0
+the inkey list,fulvic acid cleanser 50ml,3.25,4.355,https://www.sephora.co.uk/p/The-INKEY-List-Fulvic-Acid-Cleanser-50ml,Cleansers,Budget-Friendly,0.0
+cosrx,low-ph good morning gel cleanser 150ml,10.2,4.635,https://www.sephora.co.uk/p/COSRX-Low-pH-Good-Morning-Gel-Cleanser-150ml,Cleansers,Budget-Friendly,0.0
+bioderma,sensibio micellar water 250ml,9.1,4.575,https://www.sephora.co.uk/p/BIODERMA-Sensibio-H2O-Make-up-Removing-Micelle-Solution-250ml,Cleansers,Budget-Friendly,0.0
+eucerin,dermatoclean 3in1 micellar cleansing fluid,6.75,4.715,https://www.sephora.co.uk/p/Eucerin-DermatoCLEAN--Hyaluron-3-in-1-Face-Cleansing-Micellar-Water-for-Sensitive-Skin-200ml,Cleansers,Budget-Friendly,0.0
+cerave,foaming cleanser for normal to oily skin 473ml,12.9,4.65,https://www.sephora.co.uk/p/CeraVe-Foaming-Facial-Cleanser-473ml,Cleansers,Budget-Friendly,0.0
+eucerin,hyaluron mist spray 150ml,7.0,4.565,https://www.sephora.co.uk/p/Eucerin-Hyaluron-Filler-Anti-Age-Refreshing-Mist-Spray-150ml,Cleansers,Budget-Friendly,0.0
+bioderma,pigmentbio brightening face and body cleanser 200ml,13.6,4.595,https://www.sephora.co.uk/p/BIODERMA-Pigmentbio-Brightening-Face-And-Body-Cleanser-200ml,Cleansers,Budget-Friendly,0.0
+bioderma,hydrabio hydrating micellar water 250ml,9.7,4.845,https://www.sephora.co.uk/p/BIODERMA-Hydrabio-H2O-Micelle-Solution-250ml,Cleansers,Budget-Friendly,0.0
+sephora collection,clarifying face & body cleanser - face + body cleanser 200 ml,9.7,4.55,https://www.sephora.co.uk/p/Clarifying-face-and-body-cleanser-Face--body-cleanser-200-ml,Cleansers,Budget-Friendly,0.0
+bioderma,sensibio face wash 200ml,11.2,4.455,https://www.sephora.co.uk/p/BIODERMA-Sensibio-Foaming-Gel-200ml,Cleansers,Budget-Friendly,0.0
+cosrx,hydrium triple hyaluronic moisturizing cleanser 150ml,13.3,4.595,https://www.sephora.co.uk/p/COSRX-Hydrium-Triple-Hyaluronic-Moisturizing-Cleanser-150ml,Cleansers,Budget-Friendly,0.0
+bioderma,hydrabio hydrating micellar water 100ml,5.2,4.845,https://www.sephora.co.uk/p/BIODERMA-Hydrabio-H2O-Micelle-Solution-100ml,Cleansers,Budget-Friendly,0.0
+bioderma,sebium purifying face wash 200ml,9.8,4.285,https://www.sephora.co.uk/p/BIODERMA-Sebium-Purifying-Cleansing-Foaming-Gel-200ml,Cleansers,Budget-Friendly,0.0
+bioderma,sensibio h2o eye biphasic micellar makeup remover 125ml,11.2,4.645,https://www.sephora.co.uk/p/BIODERMA-Sensibio-H2O-Eyes-and-Lips-Waterproof-Biphasic-Micellar-Sensitive-Skin-125ml,Cleansers,Budget-Friendly,0.0
+cosrx,two in one poreless power liquid 100ml,15.5,4.675,https://www.sephora.co.uk/p/COSRX-Two-In-One-Poreless-Power-Liquid-100ml,Cleansers,Budget-Friendly,0.0
+bioderma,sensibio seborrheic dermatitis face wash 200ml,12.8,4.465,https://www.sephora.co.uk/p/BIODERMA-Sensibio-DS-Purifying-Soothing-Cleansing-Gel-200ml,Cleansers,Budget-Friendly,0.0
+bioderma,atoderm normal to very dry skin face and body cleanser 200ml,9.0,4.375,https://www.sephora.co.uk/p/BIODERMA-Atoderm-Shower-Oil-200ml,Cleansers,Budget-Friendly,0.0
+sephora collection,targeted pores serum 30ml,17.2,4.615,https://www.sephora.co.uk/p/Targeted-pores-serum-Pores-Serum-for-Face-and-Neck-with-6-BHA--PHA-30-ml,Cleansers,Budget-Friendly,0.0
+cetaphil,healthy radiance creamy cleanser 100g,11.2,4.395,https://www.sephora.co.uk/p/Cetaphil-Healthy-Radiance-Creamy-Cleanser-100g,Cleansers,Budget-Friendly,0.0
+bioderma,sebium micellar water for blemish-prone skin 250ml,9.1,4.745,https://www.sephora.co.uk/p/BIODERMA-Sebium-H2O-Purifying-Cleansing-Micelle-Solution-250ml,Cleansers,Budget-Friendly,0.0
+bioderma,pigmentbio brightening micellar water 250ml,10.4,4.835,https://www.sephora.co.uk/p/BIODERMA-Pigmentbio-Brightening-Micellar-Water-250ml,Cleansers,Budget-Friendly,0.0
+bioderma,sebium micellar water for blemish-prone skin 100ml,5.2,4.725,https://www.sephora.co.uk/p/BIODERMA-Sebium-H2O-Purifying-Cleansing-Micelle-Solution-100ml,Cleansers,Budget-Friendly,0.0
+the ordinary,squalane cleanser 50ml,8.3,4.565,https://www.sephora.co.uk/p/The-Ordinary-Squalane-Cleanser-50ml,Cleansers,Budget-Friendly,0.0
+bioderma,atoderm anti-itch spray 200ml,13.6,4.495,https://www.sephora.co.uk/p/BIODERMA-Atoderm-Anti-itch-Spray-200ml,Cleansers,Budget-Friendly,0.0
+cosrx,low ph good morning gel cleanser 50ml,9.0,4.615,https://www.sephora.co.uk/p/COSRX-Low-pH-Good-Morning-Gel-Cleanser-50ml,Cleansers,Budget-Friendly,0.0
+the ordinary,salicylic acid 2% anhydrous solution 30ml,6.8,5.0,https://www.sephora.co.uk/p/the-ordinary-salicylic-acid-2-anhydrous-solution-salicylic-acid-2-anhydrous-solution,Cleansers,Budget-Friendly,0.0
+bioderma,sebium lotion rebalancing water oil 200ml,11.2,4.325,https://www.sephora.co.uk/p/BIODERMA-Sebium-Lotion-Rebalancing-Water-Oil-200ml,Cleansers,Budget-Friendly,0.0
+sephora collection,matte moisturizer cream 50ml,11.95,4.485,https://www.sephora.co.uk/p/SEPHORA-COLLECTION-Matte-Moisturizer-Cream-50ml,Cleansers,Budget-Friendly,0.0
+cetaphil,oily skin cleanser 473ml,17.0,4.475,https://www.sephora.co.uk/p/Cetaphil-Oily-Skin-Cleanser-473ml,Cleansers,Budget-Friendly,0.0
+cosrx,ac collection calming foam cleanser 150ml,13.95,4.435,https://www.sephora.co.uk/p/COSRX-AC-Collection-Calming-Foam-Cleanser-150ml,Cleansers,Budget-Friendly,0.0
+farmacy,beauty clearly clean makeup meltaway cleansing balm 50ml,24.0,4.275,https://www.sephora.co.uk/p/Farmacy-Beauty-Clearly-Clean-Makeup-Meltaway-Cleansing-Balm-50ml,Cleansers,Budget-Friendly,0.0
+farmacy,beauty honey butter beeswax lip balm 3.4g,11.0,4.245,https://www.sephora.co.uk/p/Farmacy-Beauty-Honey-Butter-Beeswax-Lip-Balm-34g,Cleansers,Budget-Friendly,0.0
+farmacy,whipped greens cleanser 50ml,11.0,4.515,https://www.sephora.co.uk/p/FARMACY-Whipped-Greens-Cleanser-50ml,Cleansers,Budget-Friendly,0.0
+cetaphil,gentle skin cleanser 473ml,17.0,4.415,https://www.sephora.co.uk/p/Cetaphil-Gentle-Skin-Cleanser-473ml-148647,Cleansers,Budget-Friendly,0.0
+eucerin,dermatoclean [hyaluron] toner 200ml,6.75,4.635,https://www.sephora.co.uk/p/Eucerin-DermatoCLEAN--Hyaluron-Cleansing-Facial-Toner-for-Sensitive-Skin-200ml,Toners,Budget-Friendly,0.0
+cosrx,aha/bha clarifying treatment toner 150ml,14.95,4.795,https://www.sephora.co.uk/p/COSRX-AHABHA-Clarifying-Treatment-Toner-150ml,Toners,Budget-Friendly,0.0
+the inkey list,glycolic acid toner 100ml,9.75,4.595,https://www.sephora.co.uk/p/The-INKEY-List-Glycolic-Acid-Liquid-Toner-100ml,Toners,Budget-Friendly,0.0
+sephora collection,super glow toner 200ml,11.95,4.335,https://www.sephora.co.uk/p/SEPHORA-COLLECTION-Super-Glow-Toner-200ml,Toners,Budget-Friendly,0.0
+cosrx,full fit propolis synergy toner 150ml,18.2,4.0,https://www.sephora.co.uk/p/COSRX-Full-fit-Propolis-Synergy-Toner-150ml,Toners,Budget-Friendly,0.0
+the ordinary,glycolic acid 7% toning solution 240ml,9.77,4.645,https://www.sephora.co.uk/p/The-Ordinary-Glycolic-7-Toning-Solution-240ml,Toners,Budget-Friendly,0.0
+eucerin,dermopurifyer oil control facial toner 200ml,9.55,4.595,https://www.sephora.co.uk/p/Eucerin-Dermo-Purifyer-Oil-Control-Toner-200ml,Toners,Budget-Friendly,0.0
+the ordinary,glycolic acid 7% exfoliating toner   100ml,7.7,4.575,https://www.sephora.co.uk/p/THE-ORDINARY-Glycolic-Acid-7-Exfoliating-Toner-100ml,Toners,Budget-Friendly,0.0
+farmacy,beauty deep sweep 2% bha pore cleaning toner with moringa + papaya 50ml,16.0,4.445,https://www.sephora.co.uk/p/Farmacy-Beauty-Deep-Sweep-2-BHA-Pore-Cleaning-Toner-with-Moringa--Papaya-50ml,Toners,Budget-Friendly,0.0
+cetaphil,healthy radiance refresh toner 150ml,15.99,4.565,https://www.sephora.co.uk/p/Cetaphil-Healthy-Radiance-Refresh-Toner-150ml,Toners,Budget-Friendly,0.0
+farmacy,beauty deep sweep 2% bha pore cleansing toner 120ml,23.2,4.485,https://www.sephora.co.uk/p/Farmacy-Beauty-DEEP-SWEEP-2-BHA-Pore-Cleansing-Toner-120ml,Toners,Budget-Friendly,0.0
+the inkey list,retinol serum 30ml,9.95,4.555,https://www.sephora.co.uk/p/The-INKEY-List-Retinol-Serum-30ml,Serums,Budget-Friendly,0.0
+the inkey list,15% vitamin c and egf serum 30ml,11.2,4.345,https://www.sephora.co.uk/p/The-INKEY-List-15-Vitamin-C-And-Egf-Serum-30ml,Serums,Budget-Friendly,0.0
+cerave,hydrating hyaluronic acid serum all skin types 30ml,15.95,4.635,https://www.sephora.co.uk/p/CeraVe-Hydrating-Hyaluronic-Acid-Serum-30ml,Serums,Budget-Friendly,0.0
+eucerin,anti-pigment dual serum,30.1,4.085,https://www.sephora.co.uk/p/Eucerin-Anti-Pigment-Dual-Serum-30ml,Serums,Budget-Friendly,0.0
+the inkey list,collagen peptide serum 30ml,11.25,4.375,https://www.sephora.co.uk/p/The-INKEY-List-Collagen-Serum-30ml,Serums,Budget-Friendly,0.0
+the inkey list,supersolutions 10% azelaic acid serum 30ml,11.9,4.245,https://www.sephora.co.uk/p/THE-INKEY-LIST-SuperSolutions-10-Azelaic-Acid-Serum-30ml,Serums,Budget-Friendly,0.0
+the inkey list,hyaluronic acid - serum 100ml,16.5,4.455,https://www.sephora.co.uk/p/THE-INKEY-LIST-Hyaluronic-Acid-Serum-100ml,Serums,Budget-Friendly,0.0
+the inkey list,niacinamide serum 30ml,7.4,4.275,https://www.sephora.co.uk/p/The-INKEY-List-Niacinamide-30ml-,Serums,Budget-Friendly,0.0
+the inkey list,supersolutions 1% retinol serum 30ml,17.1,4.145,https://www.sephora.co.uk/p/THE-INKEY-LIST-SuperSolutions-1-Retinol-Serum-30ml,Serums,Budget-Friendly,0.0
+the ordinary,niacinamide 10% + zinc 1% 30ml,5.0,4.625,https://www.sephora.co.uk/p/The-Ordinary-Niacinamide-10-Zinc-1-30ml,Serums,Budget-Friendly,0.0
+the ordinary,the skin support set,11.0,5.0,https://www.sephora.co.uk/p/the-ordinary-the-skin-support-set-179146,Serums,Budget-Friendly,0.0
+the ordinary,hyaluronic acid 2% + b5 30ml,8.8,4.375,https://www.sephora.co.uk/p/the-ordinary-hyaluronic-acid-2--b5-30ml,Serums,Budget-Friendly,0.0
+sephora collection,targeted anti-aging serum - face & neck serum with 1% bakuchiol & vitamin e 30 ml,17.2,4.45,https://www.sephora.co.uk/p/Targeted-anti-aging-serum-Face-and-Neck-Serum-with-1-Bakuchiol-and-Vitamin-E-30-ml,Serums,Budget-Friendly,0.0
+sephora collection,hydrating serum 30ml,17.2,4.65,https://www.sephora.co.uk/p/SEPHORA-COLLECTION-Hydrating-Serum-30ml,Serums,Budget-Friendly,0.0
+the ordinary,retinal 0.2% emulsion - age support 15ml,15.2,4.255,https://www.sephora.co.uk/p/the-ordinary-retinal-02-emulsion-age-support-15ml,Serums,Budget-Friendly,0.0
+the ordinary,soothing & barrier support serum 30ml,17.3,4.195,https://www.sephora.co.uk/p/THE-ORDINARY-Soothing-and-Barrier-Support-Serum-30ml,Serums,Budget-Friendly,0.0
+the ordinary,hyaluronic acid 2 % + b5 60ml,15.5,4.375,https://www.sephora.co.uk/p/the-ordinary-hyaluronic-acid-2-b5-60ml,Serums,Budget-Friendly,0.0
+the ordinary,niacinamide 10% + zinc 1% 60ml,9.0,5.0,https://www.sephora.co.uk/p/the-ordinary-niacinamide-10--zinc-1-niacinamide-10-and-zinc-1-60ml,Serums,Budget-Friendly,0.0
+the ordinary,hyaluronic acid 2% + b5 120ml,27.9,5.0,https://www.sephora.co.uk/p/the-ordinary-hyaluronic-acid-2--b5-120ml,Serums,Budget-Friendly,0.0
+the ordinary,salicylic acid 2% solution 30ml,6.1,4.355,https://www.sephora.co.uk/p/The-Ordinary-Salicylic-Acid-2-Solution-30ml,Serums,Budget-Friendly,0.0
+the ordinary,multi-peptide + copper peptides 1% serum 30ml,28.9,4.495,https://www.sephora.co.uk/p/THE-ORDINARY-Multi-Peptide--Copper-Peptides-1-Serum-30ml,Serums,Budget-Friendly,0.0
+the ordinary,matrixyl 10% + ha 30ml,10.4,5.0,https://www.sephora.co.uk/p/the-ordinary-matrixyl-10--ha-30ml,Serums,Budget-Friendly,0.0
+eucerin,hyaluron-filler epigenetics serum 30ml,24.5,4.515,https://www.sephora.co.uk/p/eucerin-hyaluron-filler-epigenetics-serum-30ml,Serums,Budget-Friendly,0.0
+eucerin,hyaluron-filler + elasticity 3d serum 50ml,22.5,4.525,https://www.sephora.co.uk/p/Eucerin-AA-Hyaluron-Filler-Serum-30ml,Serums,Budget-Friendly,0.0
+eucerin,hyaluron-filler day spf 30 50ml,21.3,4.65,https://www.sephora.co.uk/p/Eucerin-Hyaluron-Filler-Day-SPF30-Cream-50ml,Serums,Budget-Friendly,0.0
+cosrx,hydrium triple hyaluronic moisture ampoule 40ml,15.0,4.555,https://www.sephora.co.uk/p/COSRX-Hydrium-Triple-Hyaluronic-Moisture-Ampoule-40ml,Serums,Budget-Friendly,0.0
+eucerin,hyaluron-filler skin refining smoothing serum with hyaluronic acid 30ml,17.0,5.0,https://www.sephora.co.uk/p/Eucerin-Hyaluron-Filler-Skin-Refining-Smoothing-Serum-with-Hyaluronic-Acid-30ml-158520,Serums,Budget-Friendly,0.0
+eucerin,hyaluron-filler vitamin c booster - 1x8ml,10.0,4.425,https://www.sephora.co.uk/p/Eucerin-Hyaluron-Filler-10-Pure-Vitamin-C-Booster-8ml,Serums,Budget-Friendly,0.0
+the inkey list,q10 serum 30ml,4.5,4.375,https://www.sephora.co.uk/p/The-INKEY-List-Q10-Serum-30ml,Serums,Budget-Friendly,0.0
+bioderma,pigmentbio brightening vitamin c face serum 15ml,20.3,4.55,https://www.sephora.co.uk/p/BIODERMA-Pigmentbio-C-Concentrate-Brightening-Pigmentation-Corrector-15ml-FR,Serums,Budget-Friendly,0.0
+cosrx,advanced snail radiance dual essence 80ml,29.35,4.755,https://www.sephora.co.uk/p/COSRX-Advanced-Snail-Radiance-Dual-Essence-80ml,Serums,Budget-Friendly,0.0
+cosrx,ac collection blemish spot clearing serum 40ml,16.0,4.495,https://www.sephora.co.uk/p/COSRX-AC-Collection-Blemish-Spot-Clearing-Serum-40ml,Serums,Budget-Friendly,0.0
+sephora collection,targeted dark spots serum 30ml,17.2,4.445,https://www.sephora.co.uk/p/Targeted-dark-sports-serum-for-Face-and-Neck-with-3-Kombucha--Enzymes-30-ml,Serums,Budget-Friendly,0.0
+eucerin,dermopurifyer triple effect serum 40ml,19.0,4.245,https://www.sephora.co.uk/p/Eucerin-Triple-Effect-Serum-40ml,Serums,Budget-Friendly,0.0
+bioderma,sensibio defensive serum sensitive skin 30ml,25.6,4.585,https://www.sephora.co.uk/p/BIODERMA-Sensibio-Defensive-Serum-Sensitive-Skin-30ml,Serums,Budget-Friendly,0.0
+cosrx,pure fit cica serum 30ml,15.0,4.0,https://www.sephora.co.uk/p/COSRX-Pure-Fit-Cica-Serum-30ml,Serums,Budget-Friendly,0.0
+bioderma,hydrabio hyalu+ serum self-rehydrating replumping concentrate  30ml,24.44,4.675,https://www.sephora.co.uk/p/bioderma-hydrabio-hyalu-serum-self-rehydrating-replumping-concentrate-30ml,Serums,Budget-Friendly,0.0
+the ordinary,multi-peptide eye contour serum 15ml,19.9,4.325,https://www.sephora.co.uk/p/THE-ORDINARY-Multi-Peptide-Eye-Contour-Serum-15-ml,Serums,Budget-Friendly,0.0
+the ordinary,lactic acid 10% + ha 2% 30ml,8.8,4.575,https://www.sephora.co.uk/p/The-Ordinary-Lactic-Acid-10-HA-2-30ml,Serums,Budget-Friendly,0.0
+the ordinary,advanced granactive retinoid 2% emulsion 30ml,11.0,4.585,https://www.sephora.co.uk/p/The-Ordinary-Advanced-Granactive-Retinoid-2-Emulsion-30ml,Serums,Budget-Friendly,0.0
+the ordinary,argireline solution 10% 30ml,9.2,5.0,https://www.sephora.co.uk/p/the-ordinary-argireline-solution-10-argireline-sol-10-30ml,Serums,Budget-Friendly,0.0
+the ordinary,multi-peptide + ha serum 30ml,15.9,4.245,https://www.sephora.co.uk/p/THE-ORDINARY-Multi-Peptide--HA-Serum-30ml,Serums,Budget-Friendly,0.0
+cetaphil,gentle clear triple-action blemish salicylic acid serum 30ml,13.88,4.665,https://www.sephora.co.uk/p/CETAPHIL-Gentle-Clear-Triple-Action-Blemish-Salicylic-Acid-Serum-30ml,Serums,Budget-Friendly,0.0
+sephora collection,gentle peeling serum 30ml,17.2,4.675,https://www.sephora.co.uk/p/SEPHORA-COLLECTION-Gentle-peeling-serum-30ml,Serums,Budget-Friendly,0.0
+the inkey list,supersolutions 20% niacinamide serum 30ml,11.9,4.175,https://www.sephora.co.uk/p/THE-INKEY-LIST-SuperSolutions-20-Niacinamide-Serum-30ml,Serums,Budget-Friendly,0.0
+the ordinary,resveratrol 3% + ferulic acid 3% 30ml,9.9,4.585,https://www.sephora.co.uk/p/The-Ordinary-Resveratrol-3--Ferulic-Acid-3-30ml,Serums,Budget-Friendly,0.0
+the ordinary,balancing & clarifying serum 30 ml,20.2,4.495,https://www.sephora.co.uk/p/the-ordinary-balancing-and-clarifying-serum-30ml,Serums,Budget-Friendly,0.0
+the ordinary,aloe 2% + nag 2% solution 30ml,12.9,4.455,https://www.sephora.co.uk/p/THE-ORDINARY-Aloe-2--NAG-2-Solution-30ml,Serums,Budget-Friendly,0.0
+farmacy,beauty 10% waterless vitamin-c serum 30ml,50.0,4.35,https://www.sephora.co.uk/p/Farmacy-Beauty-10-Waterless-Vitamin-C-Serum-30ml,Serums,Budget-Friendly,0.0
+the ordinary,multi-peptide + ha serum 60ml,28.0,4.255,https://www.sephora.co.uk/p/THE-ORDINARY-Multi-Peptide--HA-Serum-60ml,Serums,Budget-Friendly,0.0
+the ordinary,amino acids + b5 30ml,8.8,4.435,https://www.sephora.co.uk/p/The-Ordinary-Amino-Acids--B5-30ml,Serums,Budget-Friendly,0.0
+farmacy,beauty filling good hyaluronic acid plumping serum 30ml,45.0,4.315,https://www.sephora.co.uk/p/Farmacy-Beauty-Filling-Good-Hyaluronic-Acid-Plumping-Serum-30ml,Serums,Budget-Friendly,0.0
+sephora collection,anti-fatigue bio-cellulose eye masks cucumber,2.95,4.55,https://www.sephora.co.uk/p/sephora-collection-anti-fatigue-eye-masks-bio-cellulose-masks-cucumber-1-pair,Eye-Creams,Budget-Friendly,0.0
+cerave,eye repair cream 14ml,9.95,4.55,https://www.sephora.co.uk/p/CeraVe-Eye-Repair-Cream-14ml,Eye-Creams,Budget-Friendly,0.0
+sephora collection,anti-fatigue bio-cellulose eye masks blueberry,2.95,4.475,https://www.sephora.co.uk/p/sephora-collection-anti-fatigue-eye-masks-bio-cellulose-masks-blueberry-1-pair,Eye-Creams,Budget-Friendly,0.0
+cosrx,advanced snail peptide eye cream 25ml,21.0,4.565,https://www.sephora.co.uk/p/COSRX-Advanced-Snail-Peptide-Eye-Cream-25ml,Eye-Creams,Budget-Friendly,0.0
+sephora collection,brightening eye cream - moisturizing & anti-dark circles eye contour cream 20ml,11.95,4.115,https://www.sephora.co.uk/p/SEPHORA-COLLECTION-Brightening-eye-cream-Moisturizing-and-anti-dark-circles-eye-contour-cream-20-ml,Eye-Creams,Budget-Friendly,0.0
+eucerin,anti-pigment illuminating eye cream 15ml,18.95,4.455,https://www.sephora.co.uk/p/EUCERIN-Anti-Pigment-Illuminating-Eye-Cream-15ml,Eye-Creams,Budget-Friendly,0.0
+eucerin,hyaluron-filler eye cream spf15 15ml,17.6,4.215,https://www.sephora.co.uk/p/Eucerin-Anti-Ageing-Hyaluron-Filler-Eye-Cream-15ml,Eye-Creams,Budget-Friendly,0.0
+eucerin,hyaluron-filler + elasticity eye cream spf20 15ml,19.31,4.45,https://www.sephora.co.uk/p/Eucerin-Hyaluron-Filler--Elasticity-Eye-Cream-SPF15-15ml,Eye-Creams,Budget-Friendly,0.0
+sephora collection,firming eye cream 20ml,14.95,4.095,https://www.sephora.co.uk/p/Firming-Eye-Cream-Firming-Eye-Cream-20-ml,Eye-Creams,Budget-Friendly,0.0
+farmacy,wake up honey eye cream 15ml,42.0,4.345,https://www.sephora.co.uk/p/FARMACY-Wake-Up-Honey-Eye-Cream-15ml,Eye-Creams,Budget-Friendly,0.0
+cetaphil,hydrating eye gel for normal to very dry skin 14ml,14.5,4.725,https://www.sephora.co.uk/p/CETAPHIL-Hydrating-Eye-Gel-for-Normal-to-Very-Dry-Skin-14ml,Eye-Creams,Budget-Friendly,0.0
+cerave,moisturising cream pot with ceramides for dry to very dry skin 454g,10.95,4.695,https://www.sephora.co.uk/p/CeraVe-Moisturising-Cream-454g,Moisturizers,Budget-Friendly,0.0
+cerave,facial moisturising lotion 50ml,10.95,4.645,https://www.sephora.co.uk/p/CeraVe-Facial-Moisturising-Lotion-52ml,Moisturizers,Budget-Friendly,0.0
+cosrx,advanced snail 96 mucin power essence 100ml,16.95,4.785,https://www.sephora.co.uk/p/COSRX-Advanced-Snail-96-Mucin-Power-Essence-100ml,Moisturizers,Budget-Friendly,0.0
+cerave,am facial moisturising lotion spf50 with ceramides for normal to dry skin 52ml,11.5,4.645,https://www.sephora.co.uk/p/CeraVe-AM-Facial-Moisturising-Lotion-SPF50-with-Ceramides-for-Normal-to-Dry-Skin-52ml,Moisturizers,Budget-Friendly,0.0
+cerave,moisturising lotion 473ml,11.9,4.675,https://www.sephora.co.uk/p/CeraVe-Moisturising-Lotion-473ml,Moisturizers,Budget-Friendly,0.0
+sephora collection,comfort cleansing oil 150ml,11.2,5.0,https://www.sephora.co.uk/p/sephora-collection-comfort-cleansing-oil-150ml,Moisturizers,Budget-Friendly,0.0
+cosrx,ac collection lightweight soothing moisturizer 80ml,11.0,4.65,https://www.sephora.co.uk/p/COSRX-AC-Collection-Lightweight-Soothing-Moisturizer-80ml,Moisturizers,Budget-Friendly,0.0
+the ordinary,azelaic acid suspension 10% 30ml,8.95,4.465,https://www.sephora.co.uk/p/The-Ordinary-Azelaic-Acid-Suspension-10-30ml,Moisturizers,Budget-Friendly,0.0
+cerave,moisturising cream 50ml,4.2,4.665,https://www.sephora.co.uk/p/CeraVe-Moisturising-Cream-50ml,Moisturizers,Budget-Friendly,0.0
+eucerin,dermo purifyer adjunctive soothing cream 50ml,9.7,4.555,https://www.sephora.co.uk/p/Eucerin-Dermo-Purifyer-Adjunctive-Soothing-Cream-50ml,Moisturizers,Budget-Friendly,0.0
+the inkey list,bio-active ceramide repairing and plumping moisturizer 50ml,14.2,4.555,https://www.sephora.co.uk/p/the-inkey-list-bio-active-ceramide-repairing-and-plumping-moisturizer-50ml,Moisturizers,Budget-Friendly,0.0
+cerave,moisturising lotion with ceramides for dry to very dry skin 236ml,9.0,4.675,https://www.sephora.co.uk/p/CeraVe-Moisturising-Lotion-236ml,Moisturizers,Budget-Friendly,0.0
+eucerin,dermopurifyer oil control mattifying fluid 50ml,7.25,4.475,https://www.sephora.co.uk/p/Eucerin-Dermo-Purifyer-Oil-Control-Mattifying-Fluid-50ml,Moisturizers,Budget-Friendly,0.0
+eucerin,anti-pigment day cream spf30 50ml,17.0,4.075,https://www.sephora.co.uk/p/Eucerin-Anti-Pigment-Day-Cream-SPF30-50ml,Moisturizers,Budget-Friendly,0.0
+bioderma,atoderm body soothing emolient 500ml,18.95,4.495,https://www.sephora.co.uk/p/BIODERMA-Atoderm-Body-Soothing-Emolient-500ml,Moisturizers,Budget-Friendly,0.0
+the ordinary,natural moisturizing factors + ha 100ml,12.8,4.645,https://www.sephora.co.uk/p/The-Ordinary-Natural-Moisturizing-Factors--HA-100ml,Moisturizers,Budget-Friendly,0.0
+sephora collection,nourishing moisturizer - moisturizing and nourishing face cream hydrate + répare -50 ml,11.2,4.215,https://www.sephora.co.uk/p/Nourishing-moisturizer-Moisturizing-and-nourishing-face-cream-Hydrate--repare-50-ml,Moisturizers,Budget-Friendly,0.0
+sephora collection,all day hydrator - moisturizing face cream 50 ml,11.95,4.415,https://www.sephora.co.uk/p/Sephora-Collection-SUPER-HYDRATANT-JOUR-22-50ML,Moisturizers,Budget-Friendly,0.0
+sephora collection,hydrating cica cream express repair care 75ml,13.45,4.845,https://www.sephora.co.uk/p/sephora-collection-hydrating-cica-cream-express-repair-care-75ml,Moisturizers,Budget-Friendly,0.0
+eucerin,aquaphor soothing skin balm 45ml,8.95,4.65,https://www.sephora.co.uk/p/Eucerin-Aquaphor-Soothing-Skin-Balm-40g,Moisturizers,Budget-Friendly,0.0
+sephora collection,firming night cream - firming + revitalizing 50 ml,14.95,4.435,https://www.sephora.co.uk/p/Firming-night-cream-Firming--Revitalizing-50-ml,Moisturizers,Budget-Friendly,0.0
+the ordinary,retinol 1% in squalane 30ml,8.5,4.55,https://www.sephora.co.uk/p/The-Ordinary-Retinol-1-in-Squalane-30ml,Moisturizers,Budget-Friendly,0.0
+cetaphil,daily hydrating moisturiser 88ml,11.5,4.595,https://www.sephora.co.uk/p/Cetaphil-Daily-Hydrating-Moisturiser-88ml,Moisturizers,Budget-Friendly,0.0
+the ordinary,100% organic cold-pressed rose hip seed oil 30ml,9.7,4.725,https://www.sephora.co.uk/p/The-Ordinary-100-Organic-Cold-Pressed-Rose-Hip-Seed-Oil-30ml,Moisturizers,Budget-Friendly,0.0
+the ordinary,granactive retinoid 5% in squalane 30ml,15.9,4.665,https://www.sephora.co.uk/p/The-Ordinary-Granactive-Retinoid-5-in-Squalane-30ml,Moisturizers,Budget-Friendly,0.0
+eucerin,hyaluron-filler + elasticity day care spf15 50ml,18.0,4.585,https://www.sephora.co.uk/p/Eucerin-Elasticity--Filler-Day-Cream-50ml,Moisturizers,Budget-Friendly,0.0
+cosrx,hyaluronic acid intensive cream 100ml,21.65,4.835,https://www.sephora.co.uk/p/COSRX-Hyaluronic-Acid-Intensive-Cream-100ml,Moisturizers,Budget-Friendly,0.0
+eucerin,hyaluron-filler + elasticity day rosé spf30 50ml,18.0,4.485,https://www.sephora.co.uk/p/EUCERIN-Hyaluron-Filler--Elasticity-Day-Rose-SPF30-50ml,Moisturizers,Budget-Friendly,0.0
+eucerin,urearepair replenishing face cream 5% urea 50ml,12.05,4.425,https://www.sephora.co.uk/p/Eucerin-Dry-Skin-Replenishing-Face-Cream-5-Urea-50ml,Moisturizers,Budget-Friendly,0.0
+eucerin,hyaluron-filler day cream spf15 (dry skin) 50ml,17.0,4.345,https://www.sephora.co.uk/p/Eucerin-Anti-Ageing-Hyaluron-Filler-Day-Cream-Rich-SPF-15-50ml,Moisturizers,Budget-Friendly,0.0
+cosrx,full fit propolis light cream,15.0,5.0,https://www.sephora.co.uk/p/COSRX-Full-fit-Propolis-Light-Cream,Moisturizers,Budget-Friendly,0.0
+eucerin,ultrasensitive soothing care (normal to combination skin) 50ml,12.7,4.645,https://www.sephora.co.uk/p/Eucerin-Ultra-Sensitive-Fluid-For-Normal-to-Combination-50ml,Moisturizers,Budget-Friendly,0.0
+farmacy,beauty honey halo ultra-hydrating ceramide moisturizer 50ml,32.95,4.45,https://www.sephora.co.uk/p/Farmacy-Beauty-Honey-Halo-Ultra-Hydrating-Ceramide-Moisturizer-50ml,Moisturizers,Budget-Friendly,0.0
+cerave,moisturising cream 177ml,8.0,4.665,https://www.sephora.co.uk/p/CeraVe-Moisturising-Cream-177ml,Moisturizers,Budget-Friendly,0.0
+cosrx,hyaluronic acid hydra power essence 100ml,13.5,4.85,https://www.sephora.co.uk/p/COSRX-Hyaluronic-Acid-Hydra-Power-Essence-100ml,Moisturizers,Budget-Friendly,0.0
+eucerin,hyaluron-filler moisture booster 30ml,12.5,4.65,https://www.sephora.co.uk/p/Eucerin-Hyaluron-Filler-Ultra-Light-Moisture-Booster-Gel-Cream-30ml,Moisturizers,Budget-Friendly,0.0
+cosrx,hydrium moisture power enriched cream 50ml,20.95,4.695,https://www.sephora.co.uk/p/COSRX-Hydrium-Moisture-Power-Enriched-Cream-50ml,Moisturizers,Budget-Friendly,0.0
+eucerin,hyaluron-filler + elasticity night 50ml,22.66,4.495,https://www.sephora.co.uk/p/Eucerin-Elasticity--Filler-Night-Cream-50ml,Moisturizers,Budget-Friendly,0.0
+eucerin,hyaluron-filler moisture booster night 50ml,17.0,4.625,https://www.sephora.co.uk/p/Eucerin-Hyaluron-Filler-Booster-Night-Gel-50ml,Moisturizers,Budget-Friendly,0.0
+eucerin,hyaluron-filler night cream 50ml,21.3,4.275,https://www.sephora.co.uk/p/Eucerin-Hyaluron-Filler-Night-Cream-50ml,Moisturizers,Budget-Friendly,0.0
+eucerin,anti-pigment night cream 50ml,21.95,4.185,https://www.sephora.co.uk/p/Eucerin-Anti-Pigment-Night-Cream-50ml,Moisturizers,Budget-Friendly,0.0
+cosrx,retinol 0.1 cream 20ml,15.0,4.55,https://www.sephora.co.uk/p/COSRX-Retinol-01-Cream-20ml,Moisturizers,Budget-Friendly,0.0
+cerave,moisturising cream 340g,10.8,4.695,https://www.sephora.co.uk/p/CeraVe-Moisturising-Cream-340g,Moisturizers,Budget-Friendly,0.0
+bioderma,sensibio anti-redness tinted moisturiser with spf 40ml,14.6,4.195,https://www.sephora.co.uk/p/BIODERMA-Sensibio-AR-BB-Cream-Anti-Redness-Skin-Perfecting-Care-SPF30-40ml,Moisturizers,Budget-Friendly,0.0
+eucerin,hyaluron-filler + elasticity day spf 30 50ml,22.66,4.565,https://www.sephora.co.uk/p/Eucerin-Hyaluron-Filler--Elasticity-Anti-Aging-Day-Cream-SPF30-50ml,Moisturizers,Budget-Friendly,0.0
+cerave,"sa smoothing cream with salicylic acid for dry, rough & bumpy skin 340g",15.7,4.545,https://www.sephora.co.uk/p/CeraVe-Smoothing-Cream-340g,Moisturizers,Budget-Friendly,0.0
+cetaphil,moisturising cream 450g,10.95,4.785,https://www.sephora.co.uk/p/Cetaphil-Moisturising-Cream-450g,Moisturizers,Budget-Friendly,0.0
+cetaphil,rich night cream 50g,7.5,4.725,https://www.sephora.co.uk/p/Cetaphil-Rich-Night-Cream-50g,Moisturizers,Budget-Friendly,0.0
+bioderma,pigmentbio brightening night face cream 50ml,20.63,4.885,https://www.sephora.co.uk/p/BIODERMA-Pigmentbio-Night-Renewer-Brightening-Overnight-Care-50ml-FR,Moisturizers,Budget-Friendly,0.0
+bioderma,sebium mattifying moisturiser 30ml,12.7,4.615,https://www.sephora.co.uk/p/BIODERMA-Sebium-Mat-Control-Shine-Control-Moisturiser-30ml,Moisturizers,Budget-Friendly,0.0
+bioderma,sensibio seborrheic dermatitis face cream 40ml,14.8,4.455,https://www.sephora.co.uk/p/BIODERMA-Sensibio-DS-Soothing-Purifying-Cream-40ml,Moisturizers,Budget-Friendly,0.0
+neutrogena,clear & soothe moisturiser 75ml,3.1,4.465,https://www.sephora.co.uk/p/Neutrogena-Clear-and-Soothe-Oil-Free-Gel-Moisturiser-75ml,Moisturizers,Budget-Friendly,0.0
+cetaphil,healthy radiance day cream spf15 50g,13.95,4.455,https://www.sephora.co.uk/p/Cetaphil-Healthy-Radiance-Day-Cream-SPF15-50g,Moisturizers,Budget-Friendly,0.0
+bioderma,sebium severe acne moisturiser 40ml,10.5,4.695,https://www.sephora.co.uk/p/BIODERMA-Sebium-Hydra-Moisturising-Compensating-Care-40ml,Moisturizers,Budget-Friendly,0.0
+bioderma,hydrabio hydrating gel 40ml,12.6,4.345,https://www.sephora.co.uk/p/BIODERMA-Hydrabio-Gel-Cream-40ml,Moisturizers,Budget-Friendly,0.0
+cerave,advanced repair ointment 88ml,10.5,5.0,https://www.sephora.co.uk/p/CERAVE-Advanced-Repair-Ointment-88ml,Moisturizers,Budget-Friendly,0.0
+bioderma,sebium pore tightener cream 30ml,13.6,4.315,https://www.sephora.co.uk/p/BIODERMA-Sebium-Pore-Refiner-30ml,Moisturizers,Budget-Friendly,0.0
+eucerin,antiredness concealing day cream spf25 (tinted) 50ml,12.0,4.015,https://www.sephora.co.uk/p/Eucerin-Anti-Redness-Concealing-Day-Cream-SPF25-50ml,Moisturizers,Budget-Friendly,0.0
+bioderma,sensitive soothing anti-blemish care 30ml,12.0,4.365,https://www.sephora.co.uk/p/BIODERMA-Sensitive-Soothing-Anti-Blemish-Care-30ml,Moisturizers,Budget-Friendly,0.0
+sephora collection,overnight hydrating mask 50ml,13.45,4.615,https://www.sephora.co.uk/p/SEPHORA-COLLECTION-Overnight-Hydrating-Mask-50ml,Moisturizers,Budget-Friendly,0.0
+bioderma,pigmentbio brightening face cream spf50+ 40ml,18.6,4.545,https://www.sephora.co.uk/p/BIODERMA-Pigmentbio-Daily-Care-SPF50-Brightening-Daily-Care-40ml-FR,Moisturizers,Budget-Friendly,0.0
+the inkey list,bakuchiol moisturizer 30ml,9.7,4.365,https://www.sephora.co.uk/p/The-INKEY-List-Bakuchiol-30ml,Moisturizers,Budget-Friendly,0.0
+cerave,oil control gel-cream moisturiser 52ml,12.35,4.645,https://www.sephora.co.uk/p/cerave-oil-control-gel-cream-moisturiser-52ml,Moisturizers,Budget-Friendly,0.0
+bioderma,atoderm body soothing emolient 200ml,12.4,4.495,https://www.sephora.co.uk/p/BIODERMA-Atoderm-Intensive-Soothing-Emollient-Care-200ml,Moisturizers,Budget-Friendly,0.0
+eucerin,anti-pigment day spf 30 tinted light 50ml,17.25,4.225,https://www.sephora.co.uk/p/Eucerin-Anti-Pigment-Tinted-Day-Cream-Light-SPF30-50ml,Moisturizers,Budget-Friendly,0.0
+bioderma,sensibio anti-redness moisturiser 40ml,13.8,4.375,https://www.sephora.co.uk/p/BIODERMA-Sensibio-AR-Anti-Redness-Care-40ml,Moisturizers,Budget-Friendly,0.0
+cetaphil,pro moisturising night cream 50ml,11.2,4.675,https://www.sephora.co.uk/p/Cetaphil-PRO-Moisturising-Night-Cream-50ml-148644,Moisturizers,Budget-Friendly,0.0
+eucerin,dermopurifyer skin renewal treatment 40ml,12.7,4.525,https://www.sephora.co.uk/p/Eucerin-Dermo-Purifyer-Oil-Control-Resurfacing-Treatment-40ml,Moisturizers,Budget-Friendly,0.0
+bioderma,sensibio defensive rich 40ml,13.6,5.0,https://www.sephora.co.uk/p/BIODERMA-Sensibio-Defensive-Rich-40ml,Moisturizers,Budget-Friendly,0.0
+cosrx,pure fit cica cream 50ml,18.0,4.455,https://www.sephora.co.uk/p/COSRX-Pure-Fit-Cica-Cream-50ml,Moisturizers,Budget-Friendly,0.0
+the ordinary,natural moisturizing factors + ha 30ml,6.1,4.465,https://www.sephora.co.uk/p/The-Ordinary-Natural-Moisturizing-Factors-HA-30ml,Moisturizers,Budget-Friendly,0.0
+the inkey list,supersolutions 10% urea moisturizer 50ml,9.5,4.355,https://www.sephora.co.uk/p/THE-INKEY-LIST-SuperSolutions-10-Urea-Moisturizer-50ml,Moisturizers,Budget-Friendly,0.0
+eucerin,ultrasensitive soothing care (dry skin) 50ml,12.7,4.475,https://www.sephora.co.uk/p/Eucerin-Ultra-Sensitive-Soothing-Care-for-Dry-Skin-50ml,Moisturizers,Budget-Friendly,0.0
+the ordinary,natural moisturizing factors + phytoceramides face cream 100 ml,20.0,4.385,https://www.sephora.co.uk/p/THE-ORDINARY-Natural-Moisturizing-Factors--PhytoCeramides-Face-Cream-100-ml,Moisturizers,Budget-Friendly,0.0
+farmacy,beauty honey halo ultra-hydrating ceramide moisturizer 25ml,17.2,4.45,https://www.sephora.co.uk/p/Farmacy-Beauty-Honey-Halo-Ultra-Hydrating-Ceramide-Moisturizer-25ml,Moisturizers,Budget-Friendly,0.0
+eucerin,hyaluron-filler night refill 50ml,20.1,4.915,https://www.sephora.co.uk/p/eucerin-hyaluron-filler-night-cream-refill-50ml,Moisturizers,Budget-Friendly,0.0
+sephora collection,soothing moisturizer 50ml,11.95,4.415,https://www.sephora.co.uk/p/SEPHORA-COLLECTION-Soothing-Moisturizer-50ml,Moisturizers,Budget-Friendly,0.0
+eucerin,hyaluron-filler anti-age day spf 15 for dry skin refill 50ml,21.4,4.735,https://www.sephora.co.uk/p/EUCERIN-Hyaluron-Filler-Anti-Age-Day-SPF-15-for-Dry-Skin-Refill-50ml,Moisturizers,Budget-Friendly,0.0
+the ordinary,100% organic cold-pressed moroccan argan oil 30ml,7.4,4.315,https://www.sephora.co.uk/p/The-Ordinary-100-Organic-Cold-Pressed-Moroccan-Argan-Oil-30ml,Moisturizers,Budget-Friendly,0.0
+bioderma,hydrabio hydrating cream 50ml,18.0,4.385,https://www.sephora.co.uk/p/BIODERMA-Hydrabio-Cream-50ml,Moisturizers,Budget-Friendly,0.0
+cetaphil,healthy radiance night cream 50g,19.9,4.685,https://www.sephora.co.uk/p/Cetaphil-Healthy-Radiance-Night-Cream-50g,Moisturizers,Budget-Friendly,0.0
+eucerin,atocontrol acute care cream 40ml,10.7,4.415,https://www.sephora.co.uk/p/Eucerin-AtoControl-Acute-Care-Cream-40ml,Moisturizers,Budget-Friendly,0.0
+the ordinary,100% plant-derived squalane 30ml,9.9,4.675,https://www.sephora.co.uk/p/The-Ordinary-100-Plant-Derived-Squalane-30ml,Moisturizers,Budget-Friendly,0.0
+the ordinary,natural moisturizing factors + beta glucan 100ml,12.0,4.25,https://www.sephora.co.uk/p/THE-ORDINARY-Natural-Moisturizing-Factors--Beta-Glucan-100ml,Moisturizers,Budget-Friendly,0.0
+eucerin,urearepair replenishing face night cream 5% urea 50ml,12.05,4.225,https://www.sephora.co.uk/p/Eucerin-Dry-Skin-Replenishing-Face-Cream-Night-5-Urea-50ml,Moisturizers,Budget-Friendly,0.0
+the ordinary,natural moisturizing factors + phytoceramides face cream 30ml,9.6,4.375,https://www.sephora.co.uk/p/the-ordinary-natural-moisturizing-factors--phytoceramides-30ml,Moisturizers,Budget-Friendly,0.0
+the ordinary,ethylated ascorbic acid 15% solution 30ml,18.0,4.545,https://www.sephora.co.uk/p/The-Ordinary-Ethylated-Ascorbic-Acid-15-Solution-30ml,Moisturizers,Budget-Friendly,0.0
+eucerin,hyaluron-filler concentrate 6x5ml,22.1,4.465,https://www.sephora.co.uk/p/Eucerin-Anti-Ageing-Hyaluron-Filler-Concentrate-6-5ml,Moisturizers,Budget-Friendly,0.0
+bioderma,cicabio crème + ultra-repairing soothing cream sfp 50+ 40ml,9.6,4.55,https://www.sephora.co.uk/p/bioderma-cicabio-creme--ultra-repairing-soothing-cream-sfp-50-40ml,Moisturizers,Budget-Friendly,0.0
+the ordinary,100% cold-pressed virgin marula oil 30ml,10.8,4.495,https://www.sephora.co.uk/p/The-Ordinary-100-Cold-Pressed-Virgin-Marula-Oil-30ml,Moisturizers,Budget-Friendly,0.0
+cetaphil,hydrating night cream for normal to very dry skin 50ml,13.0,4.725,https://www.sephora.co.uk/p/CETAPHIL-Hydrating-Night-Cream-for-Normal-to-Very-Dry-Skin-50ml,Moisturizers,Budget-Friendly,0.0
+farmacy,beauty honey grail ultra-hydrating face oil 30ml,45.0,4.245,https://www.sephora.co.uk/p/Farmacy-Beauty-HONEY-GRAIL-Ultra-Hydrating-Face-Oil-l-30ml,Moisturizers,Budget-Friendly,0.0
+farmacy,honey milk hydrating essence 120ml,31.0,4.825,https://www.sephora.co.uk/p/farmacy-honey-milk-hydrating-essence-120ml,Moisturizers,Budget-Friendly,0.0
+farmacy,beauty daily greens oil-free gel moisturizer 50ml,40.0,4.035,https://www.sephora.co.uk/p/Farmacy-Beauty-DAILY-GREENS-Oil-Free-Gel-Moisturizer-50ml,Moisturizers,Budget-Friendly,0.0
+eucerin,atocontrol face care cream 50ml,18.5,4.115,https://www.sephora.co.uk/p/Eucerin-AtoControl-Face-Care-Cream-50ml,Moisturizers,Budget-Friendly,0.0
+cetaphil,gentle clear mattifying blemish face moisturiser 89ml,16.0,4.655,https://www.sephora.co.uk/p/CETAPHIL-Gentle-Clear-Mattifying-Blemish-Face-Moisturiser-89ml,Moisturizers,Budget-Friendly,0.0
+bioderma,photoderm anti-redness tinted sunscreen spf50+ 30ml,14.9,5.0,https://www.sephora.co.uk/p/BIODERMA-Photoderm-Anti-Redness-Tinted-Sunscreen-SPF50-30ml,Sunscreens,Budget-Friendly,0.0

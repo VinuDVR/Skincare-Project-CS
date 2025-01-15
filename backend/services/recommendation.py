@@ -8,7 +8,7 @@ user_skin_concerns = user_data["Skin Concerns"]
 
 df = pd.read_csv("preprocessed_skincare_products.csv")
 
-ingredient_weights = {
+ingredient_skin = {
     'Acne or breakouts': ["salicylic acid", "benzoyl peroxide", "azelaic acid"],
     'Dry': ["hyaluronic acid", "ceramides", "glycerin"],
     'Oily': ["niacinamide", "zinc", "clay"],
@@ -48,10 +48,10 @@ filtered_products = rule_based_filtering(df, user_price_range, user_routine_pref
 
 def score_products(df, user_skin_concerns):
     required_ingredients = set(
-        ingredient for concern in user_skin_concerns for ingredient in ingredient_weights[concern]
+        ingredient for concern in user_skin_concerns for ingredient in ingredient_skin[concern]
     )
 
-    required_ingredients.update(ingredient_weights[user_skin_type])
+    required_ingredients.update(ingredient_skin[user_skin_type])
 
     df["Score"] = 0
 
@@ -74,13 +74,13 @@ recommended_products.to_csv('recommended_skincare_products.csv', index=False)
 print("Recommendations saved to recommended_skincare_products.csv")
 
 
-first_instance_per_category = (
+filtering_category = (
     recommended_products.groupby("Category", as_index = False)
     .first()
     .sort_values(by = "Category")
 )
 
-print("First Instance Products for Routine Preference: \n", first_instance_per_category)
+print("First Instance Products for Routine Preference: \n", filtering_category)
 
-first_instance_per_category.to_csv('final_recommendation.csv', index = False)
+filtering_category.to_csv('final_recommendation.csv', index = False)
 print("Finaal recommendation saved to final_recommendation.csv")
