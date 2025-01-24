@@ -2,9 +2,7 @@ import pandas as pd
 
 df = pd.read_csv("sephora_products_labeled.csv")
 
-#duplicates = df[df.duplicated()]
-#print("Duplicates: ", duplicates)
-#df.drop_duplicates()
+
 
 df.dropna(subset = ["Rating", "Ingredients"], inplace = True)
 

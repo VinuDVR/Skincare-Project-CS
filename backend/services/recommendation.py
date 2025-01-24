@@ -44,9 +44,9 @@ def rule_based_filtering(data, price_range, routine_preference):
 
     return filtered_data
 
-filtered_products = rule_based_filtering(df, user_price_range, user_routine_preference)
 
-def score_products(df, user_skin_concerns):
+
+def score_products(df, user_skin_concerns, user_skin_type):
     required_ingredients = set(
         ingredient for concern in user_skin_concerns for ingredient in ingredient_skin[concern]
     )
@@ -66,16 +66,30 @@ def score_products(df, user_skin_concerns):
     recommended_products = df[df["Score"] > 0]
     return recommended_products.sort_values(by=["Score", "Rating"], ascending=[False, False])
 
-recommended_products = score_products(filtered_products, user_skin_concerns)
+filtered_products = rule_based_filtering(df, user_price_range, user_routine_preference)
+recommended_products = score_products(filtered_products, user_skin_concerns, user_skin_type)
 
+
+sunscreen_recommendations = df[(df["Category"] == "Sunscreens") &
+                               (df["Price Category"] == user_price_range)].head(1)
+
+eye_cream_recommendations = pd.DataFrame()
+if user_routine_preference == "Extensive (6 steps)":
+    eye_cream_recommendations = df[(df["Category"] == "Eye Creams") &
+                                   (df["Price Category"] == user_price_range)].head(1)
+    
+
+
+
+final_recommended_products = pd.concat([recommended_products, sunscreen_recommendations, eye_cream_recommendations]).drop_duplicates()
 print("Recommended Products: \n", recommended_products)
 
-recommended_products.to_csv('recommended_skincare_products.csv', index=False)
+final_recommended_products.to_csv('recommended_skincare_products.csv', index=False)
 print("Recommendations saved to recommended_skincare_products.csv")
 
 
 filtering_category = (
-    recommended_products.groupby("Category", as_index = False)
+    final_recommended_products.groupby("Category", as_index = False)
     .first()
     .sort_values(by = "Category")
 )
