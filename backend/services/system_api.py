@@ -32,7 +32,7 @@ ingredient_skin = {
 app = Flask(__name__)
 CORS(app)
 
-df = pd.read_csv('preprocessed_skincare_products.csv')
+df = pd.read_csv('Skincare-Project-CS\preprocessed_skincare_products.csv')
 
 @app.route('/recommend', methods=['POST'])
 
