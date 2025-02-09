@@ -25,7 +25,7 @@ ingredient_skin = {
     'Dry': ["hyaluronic acid", "ceramides", "glycerin", "vitamin c", "sodium hyaluronate", "hyaluronan", "glycoaminoglycan"],
     'Oily': ["niacinamide", "zinc", "clay", "vitamin c", "salicylic acid"],
     'Sensitive': ["aloe vera", "chamomile", "oatmeal"],
-    'Combination': ["vitamin c", "salicylic acid"],
+    'Combination': ["vitamin c", "salicylic acid", "vitamin e"],
     'None of the above': []
 }
 
