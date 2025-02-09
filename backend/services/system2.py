@@ -8,6 +8,7 @@ user_price_range = user_data["Price Range"]
 user_routine_preference = user_data["Routine Preference"]
 user_skin_type = user_data["Skin Type"]
 user_skin_concerns = user_data["Skin Concerns"]
+user_gender = user_data["Gender"]
 
 df = pd.read_csv('preprocessed_skincare_products.csv')
 
@@ -36,19 +37,28 @@ ingredient_skin = {
 }
 
 
-def rule_based_filtering(data, price_range, routine_preference):
+def rule_based_filtering(data, price_range, routine_preference, gender):
     
-    filtered_data = data[data['Price Category'] == price_range]
-    
-    
+    if gender == "Man":
+        
+        filtered_data = data[
+            ((data["Gender"] == "Mens") | (data["Price Category"] == "No Range")) &
+            (data["Category"].isin(routine_mapping[routine_preference]))
+        ]
+        
+    else:
+        
+        filtered_data = data[
+            (data["Price Category"] == price_range) & 
+            (data["Category"].isin(routine_mapping[routine_preference])) & 
+            (data["Gender"] == "Womens")
+        ]
+
     filtered_data = filtered_data[filtered_data['Rating'] >= 4.0]
-
-    routine_categories = routine_mapping[routine_preference]
-    filtered_data = filtered_data[filtered_data['Category'].isin(routine_categories)]
-
+    
     return filtered_data
 
-filtered_products = rule_based_filtering(df, user_price_range, user_routine_preference)
+filtered_products = rule_based_filtering(df, user_price_range, user_routine_preference, user_gender)
 
 def recommendation_tfidf(filtered_data, user_skin_concerns, user_skin_type):
 
@@ -72,8 +82,11 @@ def recommendation_tfidf(filtered_data, user_skin_concerns, user_skin_type):
     return recommended
 
 
-sunscreen_recommendations = df[(df["Category"] == "Suncreens") &
-                               (df["Price Category"] == user_price_range)].head(1)
+if user_gender == "Man":
+    sunscreen_recommendations = df[df["Category"] == "Sunscreens"].head(1)
+else:
+    sunscreen_recommendations = df[(df["Category"] == "Sunscreens") &
+                                   (df["Price Category"] == user_price_range)].head(1)
 
 
 eye_cream_recommendations = pd.DataFrame()

@@ -56,6 +56,23 @@ def user_input():
             print("Invalid input. Please enter a number.")
 
     
+    gender_options = ["Man", "Woman"]
+    print("\nWhat do you identify as?")
+    for i, option in enumerate(gender_options, 1):
+        print(f"{i}. {option}")
+    while True:
+        try:
+            gender_choice = int(input("Enter the number corresponding to your choice: "))
+            if 1 <= gender_choice <= len(gender_options):
+                user_gender = gender_options[gender_choice - 1]
+                break
+            else:
+                print("Invalid choice. Please choose a valid number.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+
+
+    
     price_range_options = ["Budget-Friendly", "Mid-range", "High-end"]
     print("\nDo you have a preferred product price range in mind?")
     for i, option in enumerate(price_range_options, 1):
@@ -71,11 +88,13 @@ def user_input():
         except ValueError:
             print("Invalid input. Please enter a number.")
 
+    
     user_inputs = {
         "Skin Type": user_skin_type,
         "Skin Concerns": user_skin_concerns,
         "Routine Preference": user_routine_preference,
         "Price Range": user_price_range,
+        "Gender": user_gender,
     }
 
     print("Inputs are as follows:")

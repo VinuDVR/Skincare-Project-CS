@@ -3,7 +3,7 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
 
-products_df = pd.read_csv("sephora_products_labeled.csv")
+products_df = pd.read_csv("sephora_products_labeled_men.csv")
 
 batch_size = 500
 
@@ -38,9 +38,10 @@ for batch_number in range(total_batches):
             print(f"Error processing {row['Name']} ({product_url}): {e}")
             products_df.at[index, "Ingredients"] = "Error"
 
-    products_df.to_csv("sephora_products_labeled.csv", index = False)
+    products_df.to_csv("sephora_products_labeled_men.csv", index = False)
     print(f"Batch {batch_number + 1} saved")
 
 driver.quit()
 
 print("Scarping completed and data saved.")
+
