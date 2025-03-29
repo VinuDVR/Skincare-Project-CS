@@ -7,7 +7,7 @@ products_df = pd.read_csv("sephora_products_labeled_men.csv")
 
 batch_size = 500
 
-if "Ingrefients" not in products_df.columns:
+if "Ingredients" not in products_df.columns:
     products_df["Ingredients"] = "N/A"
 
 total_batches = len(products_df) // batch_size + (1 if len(products_df) % batch_size > 0 else 0)
@@ -45,3 +45,14 @@ driver.quit()
 
 print("Scarping completed and data saved.")
 
+base_url_cleansers_men = "https://www.boots.com/mens/skincare-body?criteria.product_type=cleanser"
+base_url_toners_men = "https://www.boots.com/mens/skincare-body?criteria.product_type=toner"
+base_url_serums_men = "https://www.boots.com/mens/skincare-body?criteria.product_type=serum"
+base_url_eyecreams_men = "https://www.boots.com/mens/skincare-body?criteria.product_type=eye+cream"
+base_url_moisturizers_men = "https://www.boots.com/mens/skincare-body?criteria.product_type=moisturiser"
+
+    "Cleansers": "https://www.johnlewis.com/browse/beauty/mens-skin-care/cleansers/_/N-a4lZ1yzjnx9",
+    "Toners": "https://www.johnlewis.com/browse/beauty/mens-skin-care/toners/_/N-a4lZ1yzjnx8",
+    "Serums": "https://www.johnlewis.com/browse/beauty/mens-skin-care/serums/_/N-a4lZ1yzjnwy",
+    "Eye-Creams": "https://www.johnlewis.com/browse/beauty/mens-skin-care/eye-cream/_/N-a4lZlq1m",
+    "Moisturisers": "https://www.johnlewis.com/browse/beauty/mens-skin-care/moisturisers/_/N-a4lZ1yzjnx6"

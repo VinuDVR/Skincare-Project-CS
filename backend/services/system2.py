@@ -58,7 +58,7 @@ def rule_based_filtering(data, price_range, routine_preference, gender):
     
     return filtered_data
 
-filtered_products = rule_based_filtering(df, user_price_range, user_routine_preference, user_gender)
+#filtered_products = rule_based_filtering(df, user_price_range, user_routine_preference, user_gender)
 
 def recommendation_tfidf(filtered_data, user_skin_concerns, user_skin_type):
 
@@ -82,31 +82,49 @@ def recommendation_tfidf(filtered_data, user_skin_concerns, user_skin_type):
     return recommended
 
 
+# Apply rule-based filtering and get recommendations
+filtered_products = rule_based_filtering(df, user_price_range, user_routine_preference, user_gender)
+recommended_products = recommendation_tfidf(filtered_products, user_skin_concerns, user_skin_type)
+
+# Handle sunscreen and eye-cream recommendations
 if user_gender == "Man":
     sunscreen_recommendations = df[df["Category"] == "Sunscreens"].head(1)
 else:
-    sunscreen_recommendations = df[(df["Category"] == "Sunscreens") &
-                                   (df["Price Category"] == user_price_range)].head(1)
-
+    sunscreen_recommendations = df[(df["Category"] == "Sunscreens") & (df["Price Category"] == user_price_range)].head(1)
 
 eye_cream_recommendations = pd.DataFrame()
 if user_routine_preference == "Extensive (6 steps)":
-    eye_cream_recommendations = df[(df["Category"] == "Eye-Creams") & 
-                                   (df["Price Category"] == user_price_range)].head(1)
+    eye_cream_recommendations = df[(df["Category"] == "Eye-Creams") & (df["Price Category"] == user_price_range)].head(1)
 
-
-recommended_products = recommendation_tfidf(filtered_products, user_skin_concerns, user_skin_type)
-
+# Combine all recommendations and drop duplicates
 final_recommendations = pd.concat([recommended_products, sunscreen_recommendations, eye_cream_recommendations]).drop_duplicates()
 
-first_instance = (
-    final_recommendations.groupby("Category", as_index=False)
-    .first()
-    .sort_values(by="Category")
+# Sort by category, similarity, and rating to prepare for ranking
+final_recommendations_sorted = final_recommendations.sort_values(
+    ['Category', 'Similarity', 'Rating'], 
+    ascending=[True, False, False]
 )
 
-final_recommendations.to_csv('recommended_skincare_products_tfidf.csv', index=False)
-first_instance.to_csv('final_recommendation_tfidf.csv', index=False)
+# Assign rank within each category
+final_recommendations_sorted['Rank'] = final_recommendations_sorted.groupby('Category').cumcount() + 1
 
-print("Recommended Products: \n", final_recommendations)
-print("Routine Preference recommendation: \n", first_instance)
+# Get categories in the current routine
+categories_in_routine = routine_mapping[user_routine_preference]
+
+# Extract top 2 products for each category in the routine
+top_2_recommendations = final_recommendations_sorted[
+    final_recommendations_sorted['Category'].isin(categories_in_routine)
+].groupby('Category').head(2)
+
+# Save primary (first) and alternate (second) recommendations
+primary_recommendations = top_2_recommendations[top_2_recommendations['Rank'] == 1]
+alternate_recommendations = top_2_recommendations[top_2_recommendations['Rank'] == 2]
+
+primary_recommendations.to_csv('primary_recommendations.csv', index=False)
+alternate_recommendations.to_csv('alternate_recommendations.csv', index=False)
+
+# Optionally, save all top 2 for each category
+top_2_recommendations.to_csv('top_2_recommendations_per_category.csv', index=False)
+
+print("Primary Recommendations:\n", primary_recommendations)
+print("\nAlternate Recommendations:\n", alternate_recommendations)

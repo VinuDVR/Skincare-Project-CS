@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("sephora_products_labeled.csv")
+df = pd.read_csv("sephora_products_labeled_new.csv")
 
 
 

@@ -1,23 +1,26 @@
 import pandas as pd
 
+def fix_image_url(url):
+    """Add https:// prefix to URLs missing a protocol"""
+    if pd.notna(url) and not url.startswith(('http://', 'https://')):
+        return f'https://{url}'
+    return url
+
+# Load existing data (if any)
 try:
     existing_df = pd.read_csv("sephora_products_labeled.csv")
+    # Fix image URLs in existing data
+    existing_df['Image URL'] = existing_df['Image URL'].apply(fix_image_url)
 except FileNotFoundError:
     existing_df = pd.DataFrame()
 
-# For all rows in existing_df, set the Gender column to "Womens".
-if "Gender" not in existing_df.columns:
-    existing_df["Gender"] = "Womens"
-else:
-    # Force all existing products to be labeled as "Womens" (unless already marked "Men")
-    existing_df.loc[existing_df["Gender"] != "Men", "Gender"] = "Womens"
+# Load new data
+new_df = pd.read_csv("sephora_products_labeled_men.csv")
+new_df['Image URL'] = new_df['Image URL'].apply(fix_image_url)
 
-# Convert new men's products to DataFrame.
-new_men_df = pd.read_csv("sephora_products_labeled_men.csv")
+# Combine datasets
+combined_df = pd.concat([existing_df, new_df], ignore_index=True)
 
-# Combine the existing data and new men's products.
-combined_df = pd.concat([existing_df, new_men_df], ignore_index=True)
-
-# Save the combined DataFrame back to the CSV file.
-combined_df.to_csv("sephora_products_labeled.csv", index=False)
-print("Combined products saved to sephora_products_labeled.csv")
+# Save combined data
+combined_df.to_csv("sephora_products_labeled_new.csv", index=False)
+print("Dataset updated with fixed image URLs")
