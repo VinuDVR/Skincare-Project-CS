@@ -25,7 +25,11 @@ class SkincareProduct {
       price: (json['Price'] as num?)?.toDouble(),
       rating: (json['Rating'] as num?)?.toDouble(),
       imageUrl: json['Image URL'] as String?,
+<<<<<<< HEAD
       productUrl: json['URL'] as String?,
+=======
+      productUrl: json['Product URL'] as String?,
+>>>>>>> 9b75dfa68459ec4ff4da941694b8de3ba5541cdd
     );
   }
 

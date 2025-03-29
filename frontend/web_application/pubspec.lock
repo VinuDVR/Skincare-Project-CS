@@ -144,6 +144,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   font_awesome_flutter:
     dependency: "direct main"
     description:
@@ -152,6 +153,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "10.8.0"
+=======
+>>>>>>> 9b75dfa68459ec4ff4da941694b8de3ba5541cdd
   http:
     dependency: "direct main"
     description:
@@ -328,6 +331,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.27.7"
+<<<<<<< HEAD
   shimmer:
     dependency: "direct main"
     description:
@@ -336,6 +340,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
+=======
+>>>>>>> 9b75dfa68459ec4ff4da941694b8de3ba5541cdd
   sky_engine:
     dependency: transitive
     description: flutter
