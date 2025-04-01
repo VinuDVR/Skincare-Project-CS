@@ -27,7 +27,7 @@ def get_database():
     client = MongoClient(MONGO_URI)
     return client['skincare']
 
-# Optional CSV initialization
+# CSV initialization
 # df = pd.read_csv('preprocessed_skincare_products.csv')
 
 routine_mapping = {
@@ -132,17 +132,6 @@ def update_price_for_product(product, products_collection):
                 price = float(price_cleaned)
             except ValueError:
                 price = None
-            #price_decimal = (
-                #product_section.find("span", class_="Price-decimal").text.strip()
-                #if product_section.find("span", class_="Price-decimal")
-                #else "00"
-            #)
-            # Construct price using a decimal point
-            #try:
-                #price = float(f"{price_integer}{price_decimal}")
-            #except ValueError:
-                #print(f"Invalid price format for product {product_id}")
-                #return None
 
             products_collection.update_one(
                 {'Product_ID': product_id},
@@ -274,10 +263,13 @@ def recommend():
     
     primary_recommendations = top_2_recommendations[top_2_recommendations['Rank'] == 1]
     alternate_recommendations = top_2_recommendations[top_2_recommendations['Rank'] == 2]
+    print("Primary: ", primary_recommendations)
+    print("Alternate: ", alternate_recommendations)
     
     primary_json = primary_recommendations.replace({np.nan: None}).to_dict(orient='records')
     alternate_json = alternate_recommendations.replace({np.nan: None}).to_dict(orient='records')
     
+
     response = {
         "primary": primary_json,
         "alternate": alternate_json

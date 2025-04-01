@@ -28,7 +28,11 @@ class RecommendationPage extends StatelessWidget {
     
     Map<String, SkincareProduct> alternateMap = {};
     for (var product in alternateProducts) {
-      alternateMap[product.category] = product;
+      bool isPrimary = primaryProducts.any((p) => p.name == product.name);
+      if (!isPrimary) {
+        alternateMap[product.category] = product;
+      }
+      
     }
     
     List<ProductPair> productPairs = primaryProducts.map((primary) {
@@ -174,15 +178,6 @@ class _FlipProductCardState extends State<FlipProductCard> {
     }
   }
 
-  String toTitleCase(String text) {
-  if (text.isEmpty) return text;
-  return text.split(' ').map((word) {
-    if (word.isEmpty) return word;
-    return word[0].toUpperCase() + word.substring(1).toLowerCase();
-    }).join(' ');
-  }
-
-
   @override
   Widget build(BuildContext context) {
     SkincareProduct product = _showAlternate && widget.productPair.alternate != null
@@ -270,7 +265,7 @@ class _FlipProductCardState extends State<FlipProductCard> {
                 ),
                 const SizedBox(height: 12),
 
-                // "Buy Now" Button
+                // "Find product" Button
                 ElevatedButton(
                   onPressed: () async {
                     final url = product.productUrl ?? 'https://www.sephora.com';

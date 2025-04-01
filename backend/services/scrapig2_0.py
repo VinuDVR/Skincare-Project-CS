@@ -84,7 +84,7 @@ all_products.extend(scrape_category(driver, base_url_eyecreams_men, "Eye-Creams"
 all_products.extend(scrape_category(driver, base_url_moisturizers_men, "Moisturizers", "No range"))
 
 df = pd.DataFrame(all_products)
-df.to_csv("sephora_products_labeled.csv", index=False)
+df.to_csv("test1.csv", index=False)
 print("All products saved to sephora_products_labeled.csv")
 
 driver.quit()
