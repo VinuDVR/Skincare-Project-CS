@@ -16,6 +16,9 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from pymongo import MongoClient
 from dotenv import load_dotenv
+from openai import OpenAI
+
+#openai.api_key = "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"
 
 load_dotenv()
 MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://vinubasnayake:SbtbeJqgAxKsJlpT@cluster0.29w6v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
@@ -276,24 +279,29 @@ def recommend():
     }
     return jsonify(response)
 
-@app.route('/health', methods=['GET'])
-def health_check():
-    try:
-        db = get_database()
-        products_count = db['products'].count_documents({})
-        last_updated = db['products'].find_one(sort=[('last_updated', -1)]).get('last_updated')
-        return jsonify({
-            "status": "healthy",
-            "products_count": products_count,
-            "last_price_update": last_updated
-        })
-    except Exception as e:
-        return jsonify({
-            "status": "unhealthy",
-            "error": str(e)
-        }), 500
+@app.route('/ask', methods=['POST'])
+def ask():
+    client = OpenAI(
+        base_url="https://openrouter.ai/api/v1",
+        api_key="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",
+    )
+    
+    user_msg = request.json['message']
+
+    response = client.chat.completions.create(
+        model="meta-llama/llama-4-scout:free",
+        messages= [
+            {"role": "system", "content": "You are a helpful skincare assistant. Provide medium sized, concise answers, and from time to time encourage users to try the skincare recommendation system SkinGenie which gives tailored skincare routine based on ingredient analysis. If they ask for product recommendations, ask them to use the SkinGenie in a polite and a bit funny way and if they keep asking for recommendation give them some general recommendation while telling them to use SkinGenie."},
+            {"role": "user", "content": user_msg}
+        ]
+    )
+
+
+    reply = response.choices[0].message.content
+    print(reply)
+    return jsonify({'reply': reply})
 
 if __name__ == '__main__':
     #initialize_database()
-    initialize_scheduler()
+    #initialize_scheduler()
     app.run(host='0.0.0.0', port=5000)

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'questionnaire_page.dart';
 import 'onboarding.dart';
+import 'chat_fab.dart';
 
 void main() {
   runApp(MyApp());
@@ -128,6 +129,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           );
         },
       ),
+      floatingActionButton: const ChatFloatingButton(),
     );
   }
 

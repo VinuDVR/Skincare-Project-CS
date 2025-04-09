@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import 'recommendation_page.dart';
 import 'product_model.dart';
 import 'main.dart';
+import 'chat_fab.dart';
 
 class QuestionnairePage extends StatefulWidget {
   @override
@@ -265,6 +266,7 @@ class _QuestionnairePageState extends State<QuestionnairePage> {
           ),
         ),
       ),
+      floatingActionButton: const ChatFloatingButton(),
     );
   }
 
