@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'product_model.dart';
 import 'questionnaire_page.dart';
 import 'main.dart';
-
+import 'chat_fab.dart';
 
 class ProductPair {
   final SkincareProduct primary;
@@ -126,6 +126,7 @@ class RecommendationPage extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: const ChatFloatingButton(),
     );
   }
 

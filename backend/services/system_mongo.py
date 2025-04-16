@@ -25,6 +25,7 @@ MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://vinubasnayake:SbtbeJqgAxKsJlpT
 
 app = Flask(__name__)
 CORS(app)
+#CORS(app, resources={r"/*": {"origins": "https://your-flutter-app-domain.com"}})
 
 def get_database():
     client = MongoClient(MONGO_URI)
@@ -291,7 +292,7 @@ def ask():
     response = client.chat.completions.create(
         model="meta-llama/llama-4-scout:free",
         messages= [
-            {"role": "system", "content": "You are a helpful skincare assistant. Provide medium sized, concise answers, and from time to time encourage users to try the skincare recommendation system SkinGenie which gives tailored skincare routine based on ingredient analysis. If they ask for product recommendations, ask them to use the SkinGenie in a polite and a bit funny way and if they keep asking for recommendation give them some general recommendation while telling them to use SkinGenie."},
+            {"role": "system", "content": "You are a helpful skincare assistant. Provide medium sized, concise answers to the prompts. If they ask for product recommendations, ask them to use the SkinGenie in a polite and a bit funny way and if they keep asking for recommendation give them some general recommendation while telling them to use SkinGenie."},
             {"role": "user", "content": user_msg}
         ]
     )
@@ -303,5 +304,5 @@ def ask():
 
 if __name__ == '__main__':
     #initialize_database()
-    initialize_scheduler()
+    #initialize_scheduler()
     app.run(host='0.0.0.0', port=5000)
