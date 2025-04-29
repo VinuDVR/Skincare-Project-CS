@@ -18,7 +18,7 @@ class _SkincareChatPageState extends State<SkincareChatPage> {
   @override
   void initState() {
     super.initState();
-    // Add welcome message
+    //Welcome message from the bot
     Future.delayed(Duration(milliseconds: 500), () {
       setState(() {
         _messages.add({
@@ -176,9 +176,9 @@ class _SkincareChatPageState extends State<SkincareChatPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true, // This allows the body to extend behind the app bar
+      extendBodyBehindAppBar: true, 
       appBar: AppBar(
-        backgroundColor: Colors.transparent, // Make app bar transparent
+        backgroundColor: Colors.transparent, 
         elevation: 0,
         flexibleSpace: Container(
           decoration: BoxDecoration(
@@ -232,7 +232,6 @@ class _SkincareChatPageState extends State<SkincareChatPage> {
           IconButton(
             icon: Icon(Icons.help_outline, color: Colors.white),
             onPressed: () {
-              // Show help or info about the chatbot
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text('Ask me anything about skincare!'),

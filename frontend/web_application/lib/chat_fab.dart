@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'chatbot.dart'; // Make sure this points to your chatbot screen
+import 'chatbot.dart';
 
 class ChatFloatingButton extends StatefulWidget {
   const ChatFloatingButton({Key? key}) : super(key: key);

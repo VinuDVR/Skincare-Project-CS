@@ -126,6 +126,13 @@ class _QuestionnairePageState extends State<QuestionnairePage> {
             builder: (context) => RecommendationPage(
               primaryProducts: primaryProducts,
               alternateProducts: alternateProducts,
+              filters: {
+                "Price Range": _priceRange,
+                "Routine Preference": _routinePreference,
+                "Skin Type": _skinType,
+                "Skin Concerns": _skinConcerns,
+                "Gender": _gender,
+              },
             ),
           ),
         );

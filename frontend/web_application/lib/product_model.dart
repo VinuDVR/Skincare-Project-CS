@@ -29,5 +29,18 @@ class SkincareProduct {
     );
   }
 
+  //Converting products to JSON
+  Map<String, dynamic> toJson() {
+    return {
+      "brand": brand,
+      "name": name,
+      "category": category,
+      "price": price,
+      "rating": rating,
+      "imageUrl": imageUrl,
+      "productUrl": productUrl,
+    };
+  }
+
   String get fullName => '$brand $name';
 }

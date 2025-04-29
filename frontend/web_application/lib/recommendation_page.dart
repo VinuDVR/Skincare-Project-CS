@@ -1,53 +1,106 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:http/http.dart' as http;
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'product_model.dart';
 import 'questionnaire_page.dart';
 import 'main.dart';
 import 'chat_fab.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProductPair {
   final SkincareProduct primary;
   final SkincareProduct? alternate;
-
   ProductPair({required this.primary, this.alternate});
 }
 
-class RecommendationPage extends StatelessWidget {
+class RecommendationPage extends StatefulWidget {
   final List<SkincareProduct> primaryProducts;
   final List<SkincareProduct> alternateProducts;
+  final Map<String, dynamic> filters; 
 
   const RecommendationPage({
     Key? key,
     required this.primaryProducts,
     required this.alternateProducts,
+    required this.filters, 
   }) : super(key: key);
 
   @override
+  _RecommendationPageState createState() => _RecommendationPageState();
+}
+
+class _RecommendationPageState extends State<RecommendationPage> {
+  final storage = const FlutterSecureStorage();
+
+  @override
+  void initState() {
+    super.initState();
+    saveRecommendationHistory();
+  }
+
+  Future<void> saveRecommendationHistory() async {
+    final token = await storage.read(key: 'jwt_token');
+    if (token == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("You need to log in to save history.")),
+      );
+      return;
+    }
+    try {
+      final Map<String, dynamic> filters = widget.filters;
+
+      final recommendations = {
+        "primary": widget.primaryProducts.map((product) => product.toJson()).toList(),
+        "alternate": widget.alternateProducts.map((product) => product.toJson()).toList(),
+      };
+
+      final response = await http.post(
+        Uri.parse('http://localhost:5000/history'),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer $token',
+        },
+        body: jsonEncode({
+          "filters": filters,
+          "recommendations": recommendations,
+        }),
+      );
+
+      if (response.statusCode == 201) {
+        print("History saved successfully!");
+      } else {
+        print("Failed to save history: ${response.body}");
+      }
+    } catch (e) {
+      print("Error saving history: $e");
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
-    
     Map<String, SkincareProduct> alternateMap = {};
-    for (var product in alternateProducts) {
-      bool isPrimary = primaryProducts.any((p) => p.name == product.name);
+    for (var product in widget.alternateProducts) {
+      bool isPrimary = widget.primaryProducts.any((p) => p.name == product.name);
       if (!isPrimary) {
         alternateMap[product.category] = product;
       }
-      
     }
-    
-    List<ProductPair> productPairs = primaryProducts.map((primary) {
+    List<ProductPair> productPairs = widget.primaryProducts.map((primary) {
       return ProductPair(
         primary: primary,
         alternate: alternateMap[primary.category],
       );
     }).toList();
-
     return Scaffold(
       backgroundColor: Colors.teal.shade600,
       appBar: AppBar(
         backgroundColor: Colors.teal.shade600,
-        title: const Text('SkinGenie',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+        title: const Text(
+          'SkinGenie',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
         actions: [
           IconButton(
             icon: Icon(Icons.home),
@@ -71,7 +124,6 @@ class RecommendationPage extends StatelessWidget {
           ),
         ],
       ),
-    
       body: Column(
         children: [
           _buildHeader(),
@@ -88,10 +140,10 @@ class RecommendationPage extends StatelessWidget {
                     text: TextSpan(
                       style: TextStyle(
                         fontSize: 16,
-                        color: const Color.fromARGB(255, 6, 6, 6)
-                            .withOpacity(0.95),
+                        color: const Color.fromARGB(255, 6, 6, 6).withOpacity(0.95),
                         height: 1.4,
                       ),
+                      //Warning statement
                       children: const [
                         TextSpan(
                             text: "Important: ",
@@ -158,10 +210,9 @@ String toTitleCase(String text) {
   }).join(' ');
 }
 
-
-
 class FlipProductCard extends StatefulWidget {
   final ProductPair productPair;
+
   const FlipProductCard({Key? key, required this.productPair}) : super(key: key);
 
   @override
@@ -181,9 +232,10 @@ class _FlipProductCardState extends State<FlipProductCard> {
 
   @override
   Widget build(BuildContext context) {
-    SkincareProduct product = _showAlternate && widget.productPair.alternate != null
-        ? widget.productPair.alternate!
-        : widget.productPair.primary;
+    SkincareProduct product =
+        _showAlternate && widget.productPair.alternate != null
+            ? widget.productPair.alternate!
+            : widget.productPair.primary;
 
     return Stack(
       children: [
@@ -193,10 +245,10 @@ class _FlipProductCardState extends State<FlipProductCard> {
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
-              mainAxisSize: MainAxisSize.min, // Prevents overflow issues
+              mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // Product Image
+                //Image
                 ClipOval(
                   child: CachedNetworkImage(
                     imageUrl: product.imageUrl ?? '',
@@ -211,27 +263,27 @@ class _FlipProductCardState extends State<FlipProductCard> {
                   ),
                 ),
                 const SizedBox(height: 12),
-
-                // Brand Name
+                //Brand Name
                 Text(
                   toTitleCase(product.brand),
                   textAlign: TextAlign.center,
                   style: const TextStyle(
-                      fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white),
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
                 ),
                 const SizedBox(height: 6),
-
-                // Product Name
+                //Product Name
                 Text(
                   toTitleCase(product.name),
                   textAlign: TextAlign.center,
                   style: const TextStyle(fontSize: 14, color: Colors.white),
                 ),
                 const SizedBox(height: 8),
-
-                // Category
+                //Category
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
                     color: Colors.green.shade700,
                     borderRadius: BorderRadius.circular(12),
@@ -239,12 +291,13 @@ class _FlipProductCardState extends State<FlipProductCard> {
                   child: Text(
                     product.category,
                     style: const TextStyle(
-                        fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
                   ),
                 ),
                 const SizedBox(height: 10),
-
-                // Rating with Star Icon
+                //Rating
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -257,16 +310,16 @@ class _FlipProductCardState extends State<FlipProductCard> {
                   ],
                 ),
                 const SizedBox(height: 8),
-
-                // Price
+                //Price
                 Text(
                   "\£${product.price?.toStringAsFixed(2) ?? 'N/A'}",
                   style: TextStyle(
-                      fontSize: 16, fontWeight: FontWeight.bold, color: Colors.green.shade400),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.green.shade400),
                 ),
                 const SizedBox(height: 12),
-
-                // "Find product" Button
+                //"Find product" Button
                 ElevatedButton(
                   onPressed: () async {
                     final url = product.productUrl ?? 'https://www.sephora.com';
@@ -276,26 +329,32 @@ class _FlipProductCardState extends State<FlipProductCard> {
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
-                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 10),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
                   ),
-                  child: const Text("Find Product", style: TextStyle(color: Colors.white)),
+                  child: const Text(
+                    "Find Product",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 const SizedBox(height: 10),
               ],
             ),
           ),
         ),
-
-        // Small Button at the Top Right for Switching Products
-        if (widget.productPair.alternate != null) 
+        //Alternate product button
+        if (widget.productPair.alternate != null)
           Positioned(
             top: 10,
             right: 10,
             child: IconButton(
               onPressed: _toggleCard,
               icon: const Icon(Icons.swap_horiz, color: Colors.white),
-              tooltip: _showAlternate ? "Show Main Product" : "Show Alternate",
+              tooltip: _showAlternate
+                  ? "Show Main Product"
+                  : "Show Alternate",
               color: Colors.blueAccent,
               iconSize: 28,
             ),
