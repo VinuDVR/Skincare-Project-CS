@@ -2,7 +2,7 @@ import os
 from pymongo import MongoClient
 import math
 
-# Set your MongoDB URI (replace with your actual URI or set as environment variable)
+
 MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://vinubasnayake:SbtbeJqgAxKsJlpT@cluster0.29w6v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 def connect_to_db():
@@ -15,7 +15,7 @@ def delete_duplicates(db):
     collection = db["products"]
     print("Working on collection 'products'.")
 
-    # Group documents by Product_ID; if count > 1, these are duplicates.
+    
     pipeline = [
         {
             "$group": {
@@ -33,7 +33,7 @@ def delete_duplicates(db):
     duplicate_groups = list(collection.aggregate(pipeline))
     print(f"Found {len(duplicate_groups)} duplicate groups.")
 
-    # Iterate over each duplicate group
+    
     total_deleted = 0
     for group in duplicate_groups:
         product_id = group["_id"]
@@ -41,7 +41,7 @@ def delete_duplicates(db):
         print(f"\nDuplicate group for Product_ID '{product_id}' has {count} records.")
         doc_ids = group["docs"]
 
-        # Keep the first document and delete the rest
+        
         id_to_keep = doc_ids[0]
         print(f"Keeping document with _id: {id_to_keep}")
         duplicate_ids = doc_ids[1:]

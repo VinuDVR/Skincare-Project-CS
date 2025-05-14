@@ -17,7 +17,7 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
   final TextEditingController passwordController = TextEditingController();
   bool isLoading = false;
 
-  // Secure storage for storing JWT token
+  //Secure storage for storing JWT token
   final storage = const FlutterSecureStorage();
 
   late AnimationController _controller;

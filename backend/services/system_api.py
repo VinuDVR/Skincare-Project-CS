@@ -52,7 +52,6 @@ def rule_based_filtering(data, price_range, routine_preference, gender):
     filtered_data = filtered_data[filtered_data['Rating'] >= 4.0]
     return filtered_data
 
-<<<<<<< HEAD
 def recommendation_tfidf(filtered_data, user_skin_concerns, user_skin_type):
     
     relevant_ingredients = [
@@ -71,9 +70,6 @@ def recommendation_tfidf(filtered_data, user_skin_concerns, user_skin_type):
     
     recommended = filtered_data.sort_values(by=["Similarity", "Rating"], ascending=[False, False])
     return recommended
-=======
-df = pd.read_csv('Skincare-Project-CS\preprocessed_skincare_products.csv')
->>>>>>> 9b75dfa68459ec4ff4da941694b8de3ba5541cdd
 
 @app.route('/recommend', methods=['POST'])
 def recommend():

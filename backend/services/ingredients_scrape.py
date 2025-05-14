@@ -51,8 +51,8 @@ base_url_serums_men = "https://www.boots.com/mens/skincare-body?criteria.product
 base_url_eyecreams_men = "https://www.boots.com/mens/skincare-body?criteria.product_type=eye+cream"
 base_url_moisturizers_men = "https://www.boots.com/mens/skincare-body?criteria.product_type=moisturiser"
 
-    "Cleansers": "https://www.johnlewis.com/browse/beauty/mens-skin-care/cleansers/_/N-a4lZ1yzjnx9",
-    "Toners": "https://www.johnlewis.com/browse/beauty/mens-skin-care/toners/_/N-a4lZ1yzjnx8",
-    "Serums": "https://www.johnlewis.com/browse/beauty/mens-skin-care/serums/_/N-a4lZ1yzjnwy",
-    "Eye-Creams": "https://www.johnlewis.com/browse/beauty/mens-skin-care/eye-cream/_/N-a4lZlq1m",
-    "Moisturisers": "https://www.johnlewis.com/browse/beauty/mens-skin-care/moisturisers/_/N-a4lZ1yzjnx6"
+    #"Cleansers": "https://www.johnlewis.com/browse/beauty/mens-skin-care/cleansers/_/N-a4lZ1yzjnx9",
+    #"Toners": "https://www.johnlewis.com/browse/beauty/mens-skin-care/toners/_/N-a4lZ1yzjnx8",
+    #"Serums": "https://www.johnlewis.com/browse/beauty/mens-skin-care/serums/_/N-a4lZ1yzjnwy",
+    #"Eye-Creams": "https://www.johnlewis.com/browse/beauty/mens-skin-care/eye-cream/_/N-a4lZlq1m",
+    #"Moisturisers": "https://www.johnlewis.com/browse/beauty/mens-skin-care/moisturisers/_/N-a4lZ1yzjnx6"

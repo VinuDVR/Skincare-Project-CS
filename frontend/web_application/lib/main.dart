@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,
         colorScheme: ColorScheme.light(
-          primary: Color(0xFF6A9113), // Darker gradient color
-          secondary: Color(0xFF141517), // Lighter gradient color
+          primary: Color(0xFF6A9113), 
+          secondary: Color(0xFF141517), 
         ),
       ),
       initialRoute: '/',
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Auth service to match your login page implementation
+
 class AuthService {
   static final AuthService _instance = AuthService._internal();
   
@@ -78,7 +78,7 @@ class AuthService {
       if (response.statusCode == 200) {
         return true;
       } else {
-        // Token expired or invalid
+        
         await removeToken();
         return false;
       }

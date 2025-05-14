@@ -18,7 +18,7 @@ class _SkincareChatPageState extends State<SkincareChatPage> {
   @override
   void initState() {
     super.initState();
-    //Welcome message from the bot
+    
     Future.delayed(Duration(milliseconds: 500), () {
       setState(() {
         _messages.add({
@@ -57,7 +57,7 @@ class _SkincareChatPageState extends State<SkincareChatPage> {
   }
 
   Future<void> _getBotResponse(String userInput) async {
-    final url = Uri.parse('http://127.0.0.1:5000/ask'); // Replace with your Flask server URL
+    final url = Uri.parse('http://127.0.0.1:5000/ask'); 
 
     try {
       final response = await http.post(

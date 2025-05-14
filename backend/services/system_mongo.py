@@ -111,7 +111,7 @@ def update_price_for_product(product, products_collection):
     brand = product.get('Brand')
     name = product.get('Name')
 
-    # Validate URL before processing
+    
     if not url or str(url).strip().lower() == 'nan':
         print(f"Invalid URL for product {product_id} - skipping")
         return None
@@ -150,7 +150,7 @@ def update_price_for_product(product, products_collection):
                 }
             )
             print(f"Updated price for product {product_id}, {url}: {price}")
-            # Random delay to mimic human behavior
+            
             time.sleep(random.uniform(1, 7))
             return product_id
         else:

@@ -18,21 +18,21 @@ time.sleep(10)
 
 while True:
     try:
-        # Locate the load more button
+        
         load_more_button = WebDriverWait(driver, 10).until(
                 EC.visibility_of_element_located((By.CSS_SELECTOR, "div.eba-component.loadMoreContainer"))
             )
 
-        # Scroll to the button and click it
+        
         driver.execute_script("arguments[0].scrollIntoView(true);", load_more_button)
         time.sleep(1)
         load_more_button.click()
         
-        # Wait to allow products to load
+        
         time.sleep(3)
         
     except (ElementNotInteractableException, TimeoutException):
-            # Break the loop if the button is no longer clickable or visible
+            
             print("Load more button is no longer interactable or visible.")
             break
 
