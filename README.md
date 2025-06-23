@@ -31,5 +31,5 @@ SkinGenie is a full-stack web application designed to provide users with persona
 
 ## Running the Application
 
-- Simply run the system_new.py file to run the backend.
-- To run the frontend, run the main.dart file in frontend folder separately. (You can choose any view to build, but as this is a web application Chrome (Web) view is recommended)
+- Simply run the system_new.py file to run the backend which is in backend/services.
+- To run the frontend, run the main.dart file in frontend/web_application/lib folder separately. (You can choose any view to build, but as this is a web application Chrome (Web) view is recommended)
