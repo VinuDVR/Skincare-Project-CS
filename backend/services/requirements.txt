@@ -1,0 +1,14 @@
+flask
+flask_cors
+flask_jwt_extended
+pymongo
+pandas
+numpy
+scikit-learn
+beautifulsoup4
+requests
+python-dotenv
+openai
+werkzeug
+schedule
+gunicorn
