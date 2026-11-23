@@ -2,7 +2,7 @@ services:
   - type: web
     name: skingenie-api
     runtime: python
-    plan: starter
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120 backend.services.system_new:app
     healthCheckPath: /health
