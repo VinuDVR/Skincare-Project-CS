@@ -5,6 +5,7 @@ import 'recommendation_page.dart';
 import 'product_model.dart';
 import 'main.dart';
 import 'chat_fab.dart';
+import 'config/api_config.dart';
 
 class QuestionnairePage extends StatefulWidget {
   @override
@@ -94,7 +95,7 @@ class _QuestionnairePageState extends State<QuestionnairePage> {
 
     try {
       final response = await http.post(
-        Uri.parse('http://localhost:5000/recommend'),
+        ApiConfig.endpoint('recommend'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           "Gender": _gender,

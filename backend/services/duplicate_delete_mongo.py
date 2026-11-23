@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import math
 
 
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://vinubasnayake:SbtbeJqgAxKsJlpT@cluster0.29w6v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+MONGO_URI = os.environ["MONGO_URI"]
 
 def connect_to_db():
     client = MongoClient(MONGO_URI)

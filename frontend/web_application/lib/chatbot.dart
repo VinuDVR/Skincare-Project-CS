@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'config/api_config.dart';
 
 class SkincareChatPage extends StatefulWidget {
   const SkincareChatPage({Key? key}) : super(key: key);
@@ -57,7 +58,7 @@ class _SkincareChatPageState extends State<SkincareChatPage> {
   }
 
   Future<void> _getBotResponse(String userInput) async {
-    final url = Uri.parse('http://127.0.0.1:5000/ask'); 
+    final url = ApiConfig.endpoint('ask');
 
     try {
       final response = await http.post(

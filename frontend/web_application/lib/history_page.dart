@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'config/api_config.dart';
 
 class HistoryPage extends StatefulWidget {
   const HistoryPage({super.key});
@@ -29,7 +30,7 @@ class _HistoryPageState extends State<HistoryPage> {
     if (token == null) return false;
 
     final response = await http.get(
-      Uri.parse('http://localhost:5000/check-auth'),
+      ApiConfig.endpoint('check-auth'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $token',
@@ -53,7 +54,7 @@ class _HistoryPageState extends State<HistoryPage> {
     final token = await getToken();
     try {
       final response = await http.get(
-        Uri.parse('http://localhost:5000/history'),
+        ApiConfig.endpoint('history'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer $token',

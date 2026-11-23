@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import pandas as pd
 from datetime import datetime
 from pymongo import MongoClient
@@ -6,9 +7,11 @@ from dotenv import load_dotenv
 
 # --- Copy these functions from your app.py ---
 
-load_dotenv()
+load_dotenv(Path(__file__).with_name('.env'))
 
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://vinubasnayake:SbtbeJqgAxKsJlpT@cluster0.29w6v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+MONGO_URI = os.getenv("MONGO_URI")
+if not MONGO_URI:
+    raise RuntimeError("MONGO_URI must be configured in the environment")
 client = MongoClient(MONGO_URI)
 db = client['skincare']
 
@@ -17,7 +20,8 @@ def get_database():
 
 def initialize_database():
     # (Paste your entire initialize_database function here)
-    df = pd.read_csv('preprocessed_skincare_products.csv')
+    csv_path = Path(__file__).resolve().parents[2] / 'preprocessed_skincare_products.csv'
+    df = pd.read_csv(csv_path)
     
     if 'Product URL' in df.columns and 'URL' not in df.columns:
         df.rename(columns={'Product URL': 'URL'}, inplace=True)

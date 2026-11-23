@@ -19,31 +19,51 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from bson.objectid import ObjectId
 import uuid
+from pathlib import Path
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
-load_dotenv()
+load_dotenv(Path(__file__).with_name('.env'))
 
 #Connecting to the MongoDB and initiating the collections
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://vinubasnayake:SbtbeJqgAxKsJlpT@cluster0.29w6v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-client = MongoClient(MONGO_URI)
+MONGO_URI = os.getenv("MONGO_URI")
+SECRET_KEY = os.getenv("SECRET_KEY")
+if not MONGO_URI:
+    raise RuntimeError("MONGO_URI must be configured in the environment")
+if not SECRET_KEY:
+    raise RuntimeError("SECRET_KEY must be configured in the environment")
+
+client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=10000)
 db = client['skincare']
 users_collection = db['users']
 history_collection = db['history']
 
 #Starting the Flask app
 app = Flask(__name__)
-CORS(app, supports_credentials=True)
+CORS_ORIGINS = [origin.strip() for origin in os.getenv(
+    "CORS_ORIGINS", r"http://localhost:\d+,http://127\.0\.0\.1:\d+"
+).split(",") if origin.strip()]
+CORS(app, origins=CORS_ORIGINS, supports_credentials=True)
 
 #JWT tokens for account authentications
-app.config['JWT_SECRET_KEY'] = os.getenv("SECRET_KEY", "45C1BAD77EE36")
+app.config['JWT_SECRET_KEY'] = SECRET_KEY
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(hours=24)
 jwt = JWTManager(app)
 
 
 def get_database():
     return client['skincare']
+
+
+@app.get('/health')
+def health():
+    try:
+        client.admin.command('ping')
+        return jsonify({"status": "ok"}), 200
+    except Exception:
+        app.logger.exception("Database health check failed")
+        return jsonify({"status": "unavailable"}), 503
 
 #Mapping the products for each routine types
 routine_mapping = {
@@ -73,7 +93,8 @@ ingredient_skin = {
 
 def initialize_database():
     #Load products from the CSV file
-    df = pd.read_csv('preprocessed_skincare_products.csv')
+    csv_path = Path(__file__).resolve().parents[2] / 'preprocessed_skincare_products.csv'
+    df = pd.read_csv(csv_path)
     
     #Change the column name 
     if 'Product URL' in df.columns and 'URL' not in df.columns:
@@ -256,6 +277,8 @@ def register():
     db = get_database()
     users_collection = db['users']
     data = request.get_json()
+    if not isinstance(data, dict):
+        return jsonify({"message": "A JSON request body is required"}), 400
     email = data.get("email")
     password = data.get("password")
     
@@ -286,6 +309,8 @@ def login():
     db = get_database()
     users_collection = db['users']
     data = request.get_json()
+    if not isinstance(data, dict):
+        return jsonify({"message": "A JSON request body is required"}), 400
     email = data.get("email")
     password = data.get("password")
 
@@ -308,15 +333,26 @@ def login():
 @app.route('/recommend', methods=['POST'])
 def recommend():
     df = get_products_from_db()
+    if df.empty:
+        return jsonify({"message": "Product catalogue is empty. Load the product data first."}), 503
     data = request.get_json()
+    if not isinstance(data, dict):
+        return jsonify({"message": "A JSON request body is required"}), 400
     user_price_range = data.get("Price Range")
     user_routine_preference = data.get("Routine Preference")
     user_skin_type = data.get("Skin Type")
     user_skin_concerns = data.get("Skin Concerns")  
     user_gender = data.get("Gender")
+
+    if user_routine_preference not in routine_mapping:
+        return jsonify({"message": "Invalid Routine Preference"}), 400
+    if not isinstance(user_skin_concerns, list):
+        return jsonify({"message": "Skin Concerns must be a list"}), 400
     
     
     filtered_products = rule_based_filtering(df, user_price_range, user_routine_preference, user_gender)
+    if filtered_products.empty:
+        return jsonify({"primary": [], "alternate": []}), 200
     recommended_products = recommendation_tfidf(filtered_products, user_skin_concerns, user_skin_type)
 
    
@@ -355,32 +391,6 @@ def recommend():
         "primary": primary_json,
         "alternate": alternate_json
     }
-
-    #Saving the recommendations of the user is logged in
-    auth_header = request.headers.get('Authorization')
-    if auth_header and auth_header.startswith('Bearer '):
-        try:
-            
-            current_user = get_jwt_identity()
-            if current_user:
-                history_entry = {
-                    "user_id": current_user,
-                    "filters": {
-                        "Price Range": user_price_range,
-                        "Routine Preference": user_routine_preference,
-                        "Skin Type": user_skin_type,
-                        "Skin Concerns": user_skin_concerns,
-                        "Gender": user_gender
-                    },
-                    "recommendations": {
-                        "primary": primary_json,
-                        "alternate": alternate_json
-                    },
-                    "timestamp": datetime.utcnow().isoformat()
-                }
-                history_collection.insert_one(history_entry)
-        except Exception as e:
-            print(f"Error saving history: {e}")
 
     return jsonify(response)
 
@@ -430,11 +440,17 @@ def get_history():
 @app.route('/ask', methods=['POST'])
 
 def ask():
+    api_key = os.getenv("OPENROUTER_API_KEY")
+    if not api_key:
+        return jsonify({"message": "Chat service is not configured"}), 503
     client = OpenAI(
         base_url="https://openrouter.ai/api/v1",
-        api_key="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",
+        api_key=api_key,
     )
-    user_msg = request.json['message']
+    data = request.get_json(silent=True) or {}
+    user_msg = data.get('message', '').strip()
+    if not user_msg:
+        return jsonify({"message": "message is required"}), 400
     response = client.chat.completions.create(
         model="meta-llama/llama-4-scout:free",
         messages= [
@@ -450,6 +466,6 @@ def ask():
 
 
 if __name__ == '__main__':
-    #initialize_database()  
-    initialize_scheduler()
-    app.run(host='0.0.0.0', port=5000)
+    if os.getenv('ENABLE_PRICE_SCHEDULER', 'false').lower() == 'true':
+        initialize_scheduler()
+    app.run(host='0.0.0.0', port=int(os.getenv('PORT', '5000')))

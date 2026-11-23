@@ -8,6 +8,7 @@ import 'main.dart';
 import 'chat_fab.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'config/api_config.dart';
 
 class ProductPair {
   final SkincareProduct primary;
@@ -57,7 +58,7 @@ class _RecommendationPageState extends State<RecommendationPage> {
       };
 
       final response = await http.post(
-        Uri.parse('http://localhost:5000/history'),
+        ApiConfig.endpoint('history'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer $token',

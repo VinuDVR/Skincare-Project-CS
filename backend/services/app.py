@@ -26,7 +26,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 load_dotenv()
 
 #Connecting to the MongoDB and initiating the collections
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://vinubasnayake:SbtbeJqgAxKsJlpT@cluster0.29w6v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+MONGO_URI = os.environ["MONGO_URI"]
 client = MongoClient(MONGO_URI)
 db = client['skincare']
 users_collection = db['users']
@@ -387,7 +387,7 @@ def get_history():
 def ask():
     client = OpenAI(
         base_url="https://openrouter.ai/api/v1",
-        api_key="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",
+        api_key=os.environ["OPENROUTER_API_KEY"],
     )
     user_msg = request.json['message']
     response = client.chat.completions.create(

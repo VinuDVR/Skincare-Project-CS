@@ -1,11 +1,11 @@
 {
-    "name": "web_application",
-    "short_name": "web_application",
+    "name": "SkinGenie",
+    "short_name": "SkinGenie",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Personalised skincare product recommendations.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

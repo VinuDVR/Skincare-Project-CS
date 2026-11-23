@@ -8,6 +8,7 @@ import 'login.dart';
 import 'register.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'config/api_config.dart';
 
 void main() {
   runApp(MyApp());
@@ -68,7 +69,7 @@ class AuthService {
       if (token == null) return false;
       
       final response = await http.get(
-        Uri.parse('http://localhost:5000/check-auth'),
+        ApiConfig.endpoint('check-auth'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer $token',

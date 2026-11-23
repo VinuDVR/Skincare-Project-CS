@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'config/api_config.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -81,7 +82,7 @@ class _RegisterScreenState extends State<RegisterScreen> with SingleTickerProvid
     }
 
     try {
-      final url = Uri.parse('http://localhost:5000/register');
+      final url = ApiConfig.endpoint('register');
 
       final response = await http.post(
         url,
